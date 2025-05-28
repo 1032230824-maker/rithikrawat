@@ -26,19 +26,19 @@ const Index = () => {
   const portfolioItems = [
     {
       title: "Brand Collaboration",
-      thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400",
+      thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=600&fit=crop&crop=center",
       link: "https://www.instagram.com/reel/C_iaK_wCrOZ/?igsh=MTlydXVsMmd0cjNzNA==",
       category: "Brand"
     },
     {
       title: "Travel Content",
-      thumbnail: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400",
+      thumbnail: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400&h=600&fit=crop&crop=center",
       link: "https://www.instagram.com/reel/DEnSchPTlXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       category: "Travel"
     },
     {
       title: "Featured Reel",
-      thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400",
+      thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=600&fit=crop&crop=center",
       link: "https://www.instagram.com/reel/DG8OLH7t0pH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       category: "Creative"
     }
@@ -65,19 +65,39 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4">
         <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* Catchy Call-to-Action Line */}
+          <div className="mb-6">
+            <p className="font-poppins text-lg md:text-xl text-cyan-400 animate-glow">
+              Ready to Transform Your Content? Let's Create Something Amazing Together! 🚀
+            </p>
+          </div>
+
           {/* Phone Mockup with Instagram Reel */}
           <div className="relative mx-auto mb-8 w-64 h-96 md:w-80 md:h-[500px]">
             <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2.5rem] p-2 shadow-2xl">
               <div className="w-full h-full bg-black rounded-[2rem] overflow-hidden relative">
-                {/* Phone Screen Content */}
-                <div className="absolute inset-0 bg-gradient-to-b from-purple-900/50 to-blue-900/50">
-                  <iframe
-                    src="https://www.instagram.com/reel/DG8OLH7t0pH/embed"
-                    className="w-full h-full"
-                    frameBorder="0"
-                    scrolling="no"
-                    allowTransparency={true}
-                  />
+                {/* Phone Screen Content - Instagram Reel Thumbnail */}
+                <div className="absolute inset-0 bg-gradient-to-b from-purple-900/30 to-blue-900/30">
+                  <div className="w-full h-full flex items-center justify-center relative">
+                    <img 
+                      src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=300&h=500&fit=crop&crop=center"
+                      alt="Featured Reel"
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
+                      <div className="bg-white/20 backdrop-blur-sm rounded-full p-4">
+                        <Play className="h-8 w-8 text-white" />
+                      </div>
+                    </div>
+                    {/* Instagram-style overlay */}
+                    <div className="absolute bottom-4 left-4 right-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="w-8 h-8 bg-cyan-400 rounded-full"></div>
+                        <span className="text-white text-sm font-semibold">rithikrawatofficial</span>
+                      </div>
+                      <p className="text-white text-xs">Creating viral content that drives engagement 🎥✨</p>
+                    </div>
+                  </div>
                 </div>
                 {/* Glow Effect */}
                 <div className="absolute inset-0 bg-cyan-400/10 rounded-[2rem] animate-glow"></div>
@@ -207,7 +227,7 @@ const Index = () => {
                   <img 
                     src={item.thumbnail} 
                     alt={item.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                     <a href={item.link} target="_blank" rel="noopener noreferrer">
