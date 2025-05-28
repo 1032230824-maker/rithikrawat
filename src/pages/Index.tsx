@@ -26,31 +26,61 @@ const Index = () => {
   const portfolioItems = [
     {
       title: "Brand Collaboration",
-      thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400",
+      thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=400&fit=crop",
       link: "https://www.instagram.com/reel/C_iaK_wCrOZ/?igsh=MTlydXVsMmd0cjNzNA==",
       category: "Brand"
     },
     {
       title: "Travel Content",
-      thumbnail: "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400",
+      thumbnail: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=400&fit=crop",
       link: "https://www.instagram.com/reel/DEnSchPTlXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       category: "Travel"
     },
     {
       title: "Featured Reel",
-      thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400",
+      thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=400&fit=crop",
       link: "https://www.instagram.com/reel/DG8OLH7t0pH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
       category: "Creative"
     }
   ];
 
   const skills = [
-    { name: "Video Editing", icon: "🎬" },
-    { name: "Reels & Shorts", icon: "📱" },
-    { name: "Instagram Strategy", icon: "🎯" },
-    { name: "Canva Design", icon: "🎨" },
-    { name: "Thumbnail Creation", icon: "🧩" },
-    { name: "Social Media Analytics", icon: "📊" }
+    { 
+      name: "Video Editing", 
+      icon: "🎬", 
+      description: "Professional video editing with smooth transitions",
+      gradient: "from-purple-500 to-pink-500"
+    },
+    { 
+      name: "Reels & Shorts", 
+      icon: "📱", 
+      description: "Viral content creation for social platforms",
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    { 
+      name: "Instagram Strategy", 
+      icon: "🎯", 
+      description: "Growth-focused content planning",
+      gradient: "from-green-500 to-emerald-500"
+    },
+    { 
+      name: "Canva Design", 
+      icon: "🎨", 
+      description: "Eye-catching graphics and thumbnails",
+      gradient: "from-orange-500 to-red-500"
+    },
+    { 
+      name: "Thumbnail Creation", 
+      icon: "🧩", 
+      description: "Click-worthy video thumbnails",
+      gradient: "from-indigo-500 to-purple-500"
+    },
+    { 
+      name: "Social Media Analytics", 
+      icon: "📊", 
+      description: "Data-driven content optimization",
+      gradient: "from-teal-500 to-green-500"
+    }
   ];
 
   return (
@@ -65,6 +95,16 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center px-4">
         <div className={`text-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+          {/* Catchy Call-to-Action */}
+          <div className="mb-6">
+            <p className="font-poppins text-lg md:text-xl text-cyan-400 mb-2">
+              Ready to elevate your brand?
+            </p>
+            <h3 className="font-bebas text-2xl md:text-3xl text-white">
+              LET'S CREATE VIRAL CONTENT TOGETHER
+            </h3>
+          </div>
+
           {/* Phone Mockup with Instagram Reel */}
           <div className="relative mx-auto mb-8 w-64 h-96 md:w-80 md:h-[500px]">
             <div className="absolute inset-0 bg-gradient-to-b from-slate-800 to-slate-900 rounded-[2.5rem] p-2 shadow-2xl">
@@ -147,16 +187,38 @@ const Index = () => {
       <section className="py-20 px-4 bg-slate-800/50">
         <div className="max-w-6xl mx-auto">
           <h2 className="font-bebas text-5xl md:text-6xl text-center mb-16 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-            SKILLS
+            SKILLS & EXPERTISE
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {skills.map((skill, index) => (
-              <Card key={index} className="bg-slate-700/50 border-slate-600 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
-                <CardContent className="p-6 text-center">
-                  <div className="text-4xl mb-4">{skill.icon}</div>
-                  <h3 className="font-poppins font-semibold text-white">{skill.name}</h3>
-                </CardContent>
-              </Card>
+              <div 
+                key={index} 
+                className="group relative bg-slate-900/50 backdrop-blur-sm border border-slate-700 rounded-2xl p-6 hover:border-transparent transition-all duration-500 hover:scale-105 hover:shadow-2xl overflow-hidden"
+              >
+                {/* Gradient Background on Hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${skill.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500 rounded-2xl`}></div>
+                
+                {/* Icon with Glow Effect */}
+                <div className="relative mb-4">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${skill.gradient} rounded-full blur-xl opacity-0 group-hover:opacity-30 transition-opacity duration-500 w-16 h-16`}></div>
+                  <div className="relative text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                    {skill.icon}
+                  </div>
+                </div>
+
+                {/* Content */}
+                <h3 className="font-bebas text-xl mb-2 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-cyan-300 group-hover:bg-clip-text transition-all duration-300">
+                  {skill.name}
+                </h3>
+                <p className="font-poppins text-sm text-slate-400 group-hover:text-slate-300 transition-colors duration-300">
+                  {skill.description}
+                </p>
+
+                {/* Animated Border */}
+                <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${skill.gradient} p-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-500`}>
+                  <div className="w-full h-full bg-slate-900/90 rounded-2xl"></div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
