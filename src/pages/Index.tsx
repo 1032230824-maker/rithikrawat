@@ -235,31 +235,110 @@ const Index = () => {
       {/* Services Section */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto">
-          <h2 className="font-bebas text-5xl md:text-6xl text-center mb-16 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
+          <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
             SERVICES
           </h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-gradient-to-br from-white to-slate-100 border-slate-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-8 text-center">
-                <div className="text-6xl mb-6">🎬</div>
-                <h3 className="font-bebas text-2xl mb-4 text-cyan-600">REELS PACKAGES</h3>
-                <p className="font-poppins text-slate-600">3 to 10 reels per week for brands and influencers</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-white to-slate-100 border-slate-300 hover:border-blue-400/50 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-8 text-center">
-                <div className="text-6xl mb-6">📱</div>
-                <h3 className="font-bebas text-2xl mb-4 text-blue-600">SOCIAL MEDIA MANAGEMENT</h3>
-                <p className="font-poppins text-slate-600">Complete management including post scheduling, captions, and strategy</p>
-              </CardContent>
-            </Card>
-            <Card className="bg-gradient-to-br from-white to-slate-100 border-slate-300 hover:border-purple-400/50 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-8 text-center">
-                <div className="text-6xl mb-6">✂️</div>
-                <h3 className="font-bebas text-2xl mb-4 text-purple-600">VIDEO EDITING</h3>
-                <p className="font-poppins text-slate-600">Transform raw footage into polished, engaging videos</p>
-              </CardContent>
-            </Card>
+          <p className="font-poppins text-center text-slate-500 mb-4 text-lg">Content Creator & Social Media Growth Partner</p>
+          <p className="font-poppins text-center text-slate-400 mb-16 text-sm max-w-2xl mx-auto">Helping brands grow through compelling visuals, strategic content, and data-driven social media management.</p>
+          
+          {/* Main Services Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            {[
+              {
+                icon: "🎥",
+                title: "VIDEOGRAPHY",
+                color: "from-cyan-500 to-blue-500",
+                items: ["Product videography", "Event & brand shoots", "Instagram reel shoots", "Behind-the-scenes content"]
+              },
+              {
+                icon: "🎬",
+                title: "VIDEO EDITING",
+                color: "from-blue-500 to-indigo-500",
+                items: ["Reel & Shorts editing", "YouTube video editing", "Color grading & transitions", "Subtitle & caption editing"]
+              },
+              {
+                icon: "📱",
+                title: "SOCIAL MEDIA MANAGEMENT",
+                color: "from-indigo-500 to-purple-500",
+                items: ["Instagram page management", "Content calendar creation", "Grid aesthetic design", "Caption writing & scheduling"]
+              },
+              {
+                icon: "📸",
+                title: "CONTENT CREATION",
+                color: "from-purple-500 to-pink-500",
+                items: ["Brand content shooting", "Lifestyle product shoots", "Reel concepts & scripting", "Content direction"]
+              },
+              {
+                icon: "🎨",
+                title: "GRAPHIC DESIGN",
+                color: "from-pink-500 to-rose-500",
+                items: ["Instagram post & carousel design", "Story creatives", "Brand visual templates", "Canva / Photoshop / Illustrator"]
+              },
+              {
+                icon: "🧠",
+                title: "SOCIAL MEDIA STRATEGY",
+                color: "from-rose-500 to-orange-500",
+                items: ["Instagram growth strategy", "Campaign & hashtag planning", "Engagement & content ideas", "Analytics & optimization"]
+              }
+            ].map((service, index) => (
+              <div
+                key={index}
+                className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 hover:border-transparent transition-all duration-500 hover:shadow-2xl hover:-translate-y-2 overflow-hidden"
+              >
+                {/* Gradient top bar */}
+                <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${service.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                
+                <div className="text-4xl mb-4">{service.icon}</div>
+                <h3 className="font-bebas text-xl mb-4 text-slate-700">{service.title}</h3>
+                <ul className="space-y-2">
+                  {service.items.map((item, i) => (
+                    <li key={i} className="font-poppins text-sm text-slate-500 flex items-start gap-2">
+                      <span className={`mt-1.5 w-1.5 h-1.5 rounded-full bg-gradient-to-r ${service.color} flex-shrink-0`}></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Personal Branding + Package CTA */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-200/50 rounded-2xl p-8">
+              <div className="text-3xl mb-3">🌟</div>
+              <h3 className="font-bebas text-2xl mb-3 text-cyan-600">PERSONAL BRAND CONTENT</h3>
+              <p className="font-poppins text-sm text-slate-600 mb-4">For founders, influencers, and creators looking to build their personal brand.</p>
+              <ul className="space-y-2">
+                {["Personal branding reels", "Talking-head content editing", "LinkedIn & Instagram content"].map((item, i) => (
+                  <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl p-8 text-white flex flex-col justify-between">
+              <div>
+                <h3 className="font-bebas text-2xl mb-3">CONTENT CREATION PACKAGE</h3>
+                <ul className="space-y-2 mb-6">
+                  {["4 reels shoot + edit", "8 Instagram posts designed", "Story creatives", "Content planning & strategy"].map((item, i) => (
+                    <li key={i} className="font-poppins text-sm flex items-center gap-2">
+                      <span className="text-white/80">✓</span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div>
+                <p className="font-poppins text-sm opacity-80 mb-3">Starting from ₹15k/month</p>
+                <Button 
+                  className="bg-white text-blue-600 hover:bg-white/90 font-poppins font-semibold rounded-full px-6"
+                  onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                >
+                  Get a Quote →
+                </Button>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -296,7 +375,7 @@ const Index = () => {
       </section>
 
       {/* Contact Section */}
-      <section className="py-20 px-4">
+      <section id="contact" className="py-20 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="font-bebas text-5xl md:text-6xl text-center mb-16 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">
             CONTACT
