@@ -26,21 +26,18 @@ const Index = () => {
   const portfolioItems = [
     {
       title: "Brand Collaboration",
-      thumbnail: "https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&h=400&fit=crop",
-      link: "https://www.instagram.com/reel/C_iaK_wCrOZ/?igsh=MTlydXVsMmd0cjNzNA==",
-      category: "Brand"
+      embedUrl: "https://www.instagram.com/reel/C_iaK_wCrOZ/embed",
+      link: "https://www.instagram.com/reel/C_iaK_wCrOZ/?igsh=MTlydXVsMmd0cjNzNA=="
     },
     {
       title: "Travel Content",
-      thumbnail: "https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=400&h=400&fit=crop",
-      link: "https://www.instagram.com/reel/DEnSchPTlXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      category: "Travel"
+      embedUrl: "https://www.instagram.com/reel/DEnSchPTlXe/embed",
+      link: "https://www.instagram.com/reel/DEnSchPTlXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     },
     {
       title: "Featured Reel",
-      thumbnail: "https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=400&h=400&fit=crop",
-      link: "https://www.instagram.com/reel/DG8OLH7t0pH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
-      category: "Creative"
+      embedUrl: "https://www.instagram.com/reel/DG8OLH7t0pH/embed",
+      link: "https://www.instagram.com/reel/DG8OLH7t0pH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     }
   ];
 
@@ -173,9 +170,7 @@ const Index = () => {
             </div>
             <div className="lg:w-2/3 text-center lg:text-left">
               <p className="font-poppins text-lg md:text-xl leading-relaxed text-slate-600 mb-6">
-                I'm Rithik Rawat, an aspiring content creator currently in my 2nd year of EXTC Engineering at TCET, Mumbai. 
-                I love editing videos and managing social media accounts. My passion lies in creating engaging reels and content 
-                that drives real growth.
+                Rithik Rawat is a passionate content creator, videographer, and video editor based in Mumbai. Currently pursuing EXTC Engineering at TCET, he combines creativity with technical skills to produce engaging reels and digital content. With a strong interest in social media strategy, he enjoys helping brands and communities grow through visually compelling storytelling.
               </p>
               <div className="flex justify-center lg:justify-start gap-4">
                 <a href="https://www.instagram.com/sunita_creative_world?igsh=MXR0bDl4aG54d3U5Nw==" target="_blank" rel="noopener noreferrer">
@@ -277,25 +272,16 @@ const Index = () => {
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
             {portfolioItems.map((item, index) => (
-              <Card key={index} className="bg-white/80 border-slate-200 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 overflow-hidden group">
-                <div className="relative">
-                  <img 
-                    src={item.thumbnail} 
-                    alt={item.title}
-                    className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
+              <Card key={index} className="bg-white/80 border-slate-200 hover:border-cyan-400/50 transition-all duration-300 hover:scale-105 overflow-hidden">
+                <div className="relative w-full" style={{ paddingBottom: '177%' }}>
+                  <iframe
+                    src={item.embedUrl}
+                    className="absolute inset-0 w-full h-full"
+                    frameBorder="0"
+                    scrolling="no"
+                    allowTransparency={true}
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
                   />
-                  <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <a href={item.link} target="_blank" rel="noopener noreferrer">
-                      <Button className="bg-cyan-500 hover:bg-cyan-600 text-white rounded-full">
-                        <Play className="h-6 w-6" />
-                      </Button>
-                    </a>
-                  </div>
-                  <div className="absolute top-2 left-2">
-                    <span className="bg-cyan-500/80 text-white px-2 py-1 rounded text-sm font-poppins">
-                      {item.category}
-                    </span>
-                  </div>
                 </div>
                 <CardContent className="p-4">
                   <h3 className="font-poppins font-semibold text-slate-700 mb-2">{item.title}</h3>
