@@ -56,6 +56,11 @@ const Index = () => {
       title: "Featured Reel",
       embedUrl: "https://www.instagram.com/reel/DG8OLH7t0pH/embed",
       link: "https://www.instagram.com/reel/DG8OLH7t0pH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+    },
+    {
+      title: "Latest Reel",
+      embedUrl: "https://www.instagram.com/reel/DL-KLLXzee6/embed",
+      link: "https://www.instagram.com/reel/DL-KLLXzee6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
     }
   ];
 
