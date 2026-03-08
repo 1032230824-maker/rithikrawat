@@ -687,6 +687,7 @@ const Index = () => {
                       required
                     />
                     <Input 
+                      name="email"
                       type="email" 
                       placeholder="Your Email" 
                       className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl h-12"
