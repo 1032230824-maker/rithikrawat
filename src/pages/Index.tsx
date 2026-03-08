@@ -46,7 +46,12 @@ const Index = () => {
 
     const whatsappText = `Hi Rithik! I'm *${contactName.trim()}*.\n\nEmail: ${contactEmail.trim()}\n\nProject Details:\n${contactMessage.trim()}`;
     const whatsappUrl = `https://wa.me/918591872306?text=${encodeURIComponent(whatsappText)}`;
-    window.open(whatsappUrl, '_blank');
+    
+    const newWindow = window.open(whatsappUrl, '_blank');
+    if (!newWindow || newWindow.closed) {
+      // Fallback if popup is blocked (e.g., in iframe preview)
+      window.location.href = whatsappUrl;
+    }
 
     toast({
       title: "Redirecting to WhatsApp! 📱",
