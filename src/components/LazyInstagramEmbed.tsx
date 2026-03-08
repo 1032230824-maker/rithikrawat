@@ -9,18 +9,17 @@ interface LazyInstagramEmbedProps {
 
 const LazyInstagramEmbed = ({ embedUrl, title, altText }: LazyInstagramEmbedProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsInView(true);
+          setIsLoaded(true);
           observer.disconnect();
         }
       },
-      { rootMargin: "200px" }
+      { rootMargin: "300px" }
     );
     if (ref.current) observer.observe(ref.current);
     return () => observer.disconnect();
@@ -29,20 +28,14 @@ const LazyInstagramEmbed = ({ embedUrl, title, altText }: LazyInstagramEmbedProp
   return (
     <div ref={ref} className="relative w-full h-full">
       {!isLoaded && (
-        <div
-          className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 flex flex-col items-center justify-center cursor-pointer group/play z-10"
-          onClick={() => setIsLoaded(true)}
-          role="button"
-          aria-label={altText || `Play ${title}`}
-        >
-          <div className="w-16 h-16 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center shadow-lg group-hover/play:scale-110 transition-transform duration-300">
-            <Play className="h-7 w-7 text-white ml-1" />
+        <div className="absolute inset-0 bg-gradient-to-br from-slate-100 to-slate-200 flex flex-col items-center justify-center z-10">
+          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center shadow-lg animate-pulse">
+            <Play className="h-5 w-5 text-white ml-0.5" />
           </div>
-          <p className="font-poppins text-sm text-slate-500 mt-3">{title}</p>
-          <p className="font-poppins text-xs text-slate-400 mt-1">Tap to load video</p>
+          <p className="font-poppins text-xs text-slate-400 mt-3">Loading {title}...</p>
         </div>
       )}
-      {(isLoaded || isInView) && isLoaded && (
+      {isLoaded && (
         <iframe
           src={embedUrl}
           className="absolute inset-0 w-full h-full"
