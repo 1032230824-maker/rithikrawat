@@ -68,42 +68,42 @@ const Index = () => {
     { 
       name: "Video Editing", 
       icon: <Video className="h-7 w-7" />,
-      description: "Professional video editing with cinematic transitions, color grading, and sound design.",
+      description: "Transforming raw footage into polished, high-retention videos that keep viewers watching till the end.",
       tools: ["Premiere Pro", "After Effects", "DaVinci Resolve"],
       color: "from-violet-500 to-fuchsia-500"
     },
     { 
       name: "Reels & Shorts", 
       icon: <Play className="h-7 w-7" />,
-      description: "Thumb-stopping vertical content optimized for Instagram, YouTube Shorts & TikTok.",
+      description: "Creating scroll-stopping vertical content engineered for maximum reach, engagement, and virality.",
       tools: ["CapCut", "Instagram", "TikTok"],
       color: "from-blue-500 to-cyan-400"
     },
     { 
       name: "Instagram Strategy", 
       icon: <Target className="h-7 w-7" />,
-      description: "Data-driven growth strategies, hashtag research, and engagement optimization.",
+      description: "Building data-backed growth strategies that turn followers into engaged communities and paying clients.",
       tools: ["Meta Business Suite", "Analytics", "Insights"],
       color: "from-emerald-500 to-teal-400"
     },
     { 
       name: "Graphic Design", 
       icon: <Palette className="h-7 w-7" />,
-      description: "Scroll-stopping graphics, carousels, stories, and brand visual templates.",
+      description: "Designing on-brand visuals — from carousels to stories — that make your feed look cohesive and premium.",
       tools: ["Canva", "Photoshop", "Illustrator"],
       color: "from-orange-500 to-amber-400"
     },
     { 
       name: "Thumbnail Creation", 
       icon: <Puzzle className="h-7 w-7" />,
-      description: "High-CTR thumbnails that drive clicks and views for YouTube and social media.",
+      description: "Crafting high-CTR thumbnails that grab attention in crowded feeds and drive more clicks to your content.",
       tools: ["Photoshop", "Canva", "Figma"],
       color: "from-rose-500 to-pink-400"
     },
     { 
       name: "Social Media Analytics", 
       icon: <BarChart3 className="h-7 w-7" />,
-      description: "Deep performance analysis, A/B testing insights, and content optimization.",
+      description: "Turning performance data into actionable insights so every piece of content works harder for your brand.",
       tools: ["Meta Analytics", "Google Analytics", "Sprout Social"],
       color: "from-sky-500 to-indigo-400"
     }
@@ -170,16 +170,16 @@ const Index = () => {
           >
             <div className="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-200/50 rounded-full px-4 py-1.5 mb-6">
               <Sparkles className="h-4 w-4 text-cyan-500" />
-              <span className="font-poppins text-sm text-cyan-600">Available for projects</span>
+              <span className="font-poppins text-sm text-cyan-600">Open for new projects</span>
             </div>
             <h1 className="font-bebas text-6xl md:text-7xl lg:text-8xl font-bold mb-4 leading-[0.9]">
-              <span className="text-slate-800">CONTENT</span><br />
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">CREATOR</span><br />
-              <span className="text-slate-800">&</span>{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">EDITOR</span>
+              <span className="text-slate-800">TURNING</span><br />
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">IDEAS INTO</span><br />
+              <span className="text-slate-800">HIGH-PERFORMING</span>{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">CONTENT</span>
             </h1>
             <p className="font-poppins text-lg text-slate-500 mb-8 max-w-md mx-auto lg:mx-0">
-              Turning raw ideas into viral content. Let's make your brand unforgettable.
+              I help brands, creators, and real estate businesses grow on Instagram with cinematic reels, strategic content, and scroll-stopping visuals that convert viewers into clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
@@ -284,7 +284,7 @@ const Index = () => {
                   <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">RITHIK RAWAT?</span>
                 </h2>
                 <p className="font-poppins text-lg leading-relaxed text-slate-500 mb-8 text-center lg:text-left">
-                  Rithik Rawat is a passionate content creator, videographer, and video editor based in Mumbai. Currently pursuing EXTC Engineering at TCET, he combines creativity with technical skills to produce engaging reels and digital content. With a strong interest in social media strategy, he enjoys helping brands and communities grow through visually compelling storytelling.
+                  I'm Rithik Rawat — a content creator, videographer, and video editor based in Mumbai, currently pursuing EXTC Engineering at TCET. I combine my passion for cinematic storytelling with a deep understanding of social media to help brands stand out, grow their audience, and turn attention into real business results. From high-energy reels and brand collaborations to premium real estate videos, I craft content that doesn't just look good — it performs.
                 </p>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-3">
                   <a href="https://www.instagram.com/sunita_creative_world?igsh=MXR0bDl4aG54d3U5Nw==" target="_blank" rel="noopener noreferrer">
@@ -314,7 +314,7 @@ const Index = () => {
               <span className="text-slate-300">MY</span>{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">SKILLS</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Click on any skill to learn more about what I bring to the table.</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Every skill is sharpened to deliver measurable results for your brand. Tap any skill to see the tools I use.</p>
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -379,18 +379,18 @@ const Index = () => {
               <span className="text-slate-300">WHAT I</span>{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">OFFER</span>
             </h2>
-            <p className="font-poppins text-center text-slate-500 mb-4 text-lg">Content Creator & Social Media Growth Partner</p>
-            <p className="font-poppins text-center text-slate-400 mb-16 text-sm max-w-2xl mx-auto">Helping brands grow through compelling visuals, strategic content, and data-driven social media management.</p>
+            <p className="font-poppins text-center text-slate-500 mb-4 text-lg">Your Content Partner for Growth, Visibility & Engagement</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 text-sm max-w-2xl mx-auto">Whether you're struggling with low engagement, inconsistent content, or need premium reels that convert — I handle everything from shoot to strategy so you can focus on your business.</p>
           </AnimatedSection>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
-              { icon: "🎥", title: "VIDEOGRAPHY", color: "from-cyan-500 to-blue-500", items: ["Product videography", "Event & brand shoots", "Instagram reel shoots", "Behind-the-scenes content"] },
-              { icon: "🎬", title: "VIDEO EDITING", color: "from-blue-500 to-indigo-500", items: ["Reel & Shorts editing", "YouTube video editing", "Color grading & transitions", "Subtitle & caption editing"] },
-              { icon: "📱", title: "SOCIAL MEDIA", color: "from-indigo-500 to-purple-500", items: ["Instagram page management", "Content calendar creation", "Grid aesthetic design", "Caption writing & scheduling"] },
-              { icon: "📸", title: "CONTENT CREATION", color: "from-purple-500 to-pink-500", items: ["Brand content shooting", "Lifestyle product shoots", "Reel concepts & scripting", "Content direction"] },
-              { icon: "🎨", title: "GRAPHIC DESIGN", color: "from-pink-500 to-rose-500", items: ["Post & carousel design", "Story creatives", "Brand visual templates", "Canva / Photoshop"] },
-              { icon: "🧠", title: "STRATEGY", color: "from-rose-500 to-orange-500", items: ["Instagram growth strategy", "Campaign planning", "Engagement optimization", "Analytics & insights"] },
+              { icon: "🎥", title: "VIDEOGRAPHY", color: "from-cyan-500 to-blue-500", items: ["Professional product & brand videography", "On-location event coverage", "Instagram-ready reel shoots", "Behind-the-scenes content that builds trust"] },
+              { icon: "🎬", title: "VIDEO EDITING", color: "from-blue-500 to-indigo-500", items: ["Reel & Shorts editing that hooks in 3 seconds", "Long-form YouTube video editing", "Cinematic color grading & smooth transitions", "Subtitles & captions for higher retention"] },
+              { icon: "📱", title: "SOCIAL MEDIA", color: "from-indigo-500 to-purple-500", items: ["Full Instagram page management", "Strategic content calendar planning", "Feed aesthetic & grid design", "Caption writing, hashtags & scheduling"] },
+              { icon: "📸", title: "CONTENT CREATION", color: "from-purple-500 to-pink-500", items: ["End-to-end brand content production", "Lifestyle & product photography", "Reel concepts, scripting & creative direction", "Content that tells your brand story"] },
+              { icon: "🎨", title: "GRAPHIC DESIGN", color: "from-pink-500 to-rose-500", items: ["High-impact post & carousel design", "Story creatives that drive engagement", "Branded visual templates for consistency", "Canva & Photoshop design expertise"] },
+              { icon: "🧠", title: "GROWTH STRATEGY", color: "from-rose-500 to-orange-500", items: ["Instagram growth strategy & roadmaps", "Campaign planning & execution", "Engagement optimization techniques", "Analytics-driven content decisions"] },
             ].map((service, index) => (
               <AnimatedSection key={index} delay={index * 0.08}>
                 <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 hover:border-transparent transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full">
@@ -416,9 +416,9 @@ const Index = () => {
               <div className="bg-gradient-to-br from-slate-50 to-cyan-50/50 border border-slate-200 rounded-2xl p-8">
                 <div className="text-3xl mb-3">🌟</div>
                 <h3 className="font-bebas text-2xl mb-3 text-slate-700">PERSONAL BRAND CONTENT</h3>
-                <p className="font-poppins text-sm text-slate-500 mb-4">For founders, influencers, and creators building their personal brand.</p>
+                <p className="font-poppins text-sm text-slate-500 mb-4">Elevate your personal brand with content that positions you as an authority in your space.</p>
                 <ul className="space-y-2.5">
-                  {["Personal branding reels", "Talking-head content editing", "LinkedIn & Instagram content"].map((item, i) => (
+                  {["Authority-building personal brand reels", "Professional talking-head content editing", "LinkedIn & Instagram growth content"].map((item, i) => (
                     <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
                       {item}
@@ -432,7 +432,7 @@ const Index = () => {
                 <div className="relative z-10">
                   <h3 className="font-bebas text-3xl mb-4">CONTENT CREATION PACKAGE</h3>
                   <ul className="space-y-3 mb-8">
-                    {["4 reels shoot + edit", "8 Instagram posts designed", "Story creatives", "Content planning & strategy"].map((item, i) => (
+                    {["4 professional reels — shot & edited", "8 on-brand Instagram posts designed", "Engaging story creatives", "Monthly content planning & strategy"].map((item, i) => (
                       <li key={i} className="font-poppins text-sm flex items-center gap-2.5">
                         <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">✓</span>
                         {item}
@@ -463,7 +463,7 @@ const Index = () => {
               <span className="text-slate-300">MY PERSONAL</span>{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">INSTAGRAM VIDEOS</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Premium Content — Watch my latest reels directly, click to view on Instagram.</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">A curated selection of my best work — watch the reels, see the editing style, and experience the storytelling firsthand.</p>
           </AnimatedSection>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -511,7 +511,7 @@ const Index = () => {
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">REAL ESTATE WORK</span>
             </h2>
             <p className="font-poppins text-center text-slate-400 mb-16 max-w-2xl mx-auto">
-              I shoot and edit cinematic reels for real estate brands to help them attract more clients. Here's a glimpse of my premium video work.
+              Cinematic real estate reels designed to showcase properties at their best — helping agents and developers attract serious buyers and generate more inquiries through powerful visual storytelling.
             </p>
           </AnimatedSection>
 
@@ -565,7 +565,7 @@ const Index = () => {
                 <div className="text-3xl mb-3">🎬</div>
                 <h3 className="font-bebas text-2xl mb-1 text-slate-700">STARTER PACKAGE</h3>
                 <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹10,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
-                <p className="font-poppins text-sm text-slate-500 mb-4">Perfect for real estate agents who want consistent property content on social media.</p>
+                <p className="font-poppins text-sm text-slate-500 mb-4">Ideal for real estate agents who want consistent, high-quality property content to stay visible on social media.</p>
                 <ul className="space-y-2.5">
                   {["4 Cinematic property reels per month", "iPhone professional property shoot", "High-quality reel editing", "Cinematic color grading", "1 property showcase reel delivered every week"].map((item, i) => (
                     <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
@@ -584,7 +584,7 @@ const Index = () => {
                   <span className="inline-block font-poppins text-xs font-bold tracking-wider uppercase bg-white/20 px-3 py-1 rounded-full mb-3">Most Popular</span>
                   <h3 className="font-bebas text-2xl mb-1">GROWTH PACKAGE</h3>
                   <p className="font-poppins text-lg font-bold mb-3">₹18,000 <span className="text-sm font-normal opacity-80">/ month</span></p>
-                  <p className="font-poppins text-sm opacity-90 mb-4">Designed for agents and developers who want stronger visibility and premium presentation.</p>
+                  <p className="font-poppins text-sm opacity-90 mb-4">Built for agents and developers who want premium-quality presentation that sets them apart from the competition.</p>
                   <ul className="space-y-2.5 mb-6">
                     {["4 Professional property reels", "Dedicated camera property shoot", "Advanced cinematic editing", "Professional cinematic color grading", "Property highlight reels optimized for Instagram"].map((item, i) => (
                       <li key={i} className="font-poppins text-sm flex items-center gap-2.5">
@@ -607,7 +607,7 @@ const Index = () => {
                 <div className="text-3xl mb-3">👑</div>
                 <h3 className="font-bebas text-2xl mb-1 text-slate-700">PREMIUM PACKAGE</h3>
                 <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹30,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
-                <p className="font-poppins text-sm text-slate-500 mb-4">For developers and luxury property marketing who want high-end cinematic presentation.</p>
+                <p className="font-poppins text-sm text-slate-500 mb-4">For luxury developments and high-end property marketing that demands the highest level of cinematic production.</p>
                 <ul className="space-y-2.5">
                   {["8 Cinematic property reels per month", "Professional camera shoot", "High-end cinematic editing and transitions", "Premium cinematic color grading", "Luxury property showcase storytelling style"].map((item, i) => (
                     <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
@@ -630,14 +630,14 @@ const Index = () => {
               <span className="text-slate-300">LET'S</span>{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">CONNECT</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Have a project in mind? Drop a message and let's create something amazing together.</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Have a project idea or need content for your brand? Send a message through the form, call me directly, or connect on Instagram — I'd love to hear from you.</p>
           </AnimatedSection>
           
           <AnimatedSection delay={0.2}>
             <div className="grid md:grid-cols-5 gap-8">
               {/* Contact Info */}
               <div className="md:col-span-2 space-y-6">
-                <h3 className="font-bebas text-2xl text-slate-700">REACH OUT</h3>
+                <h3 className="font-bebas text-2xl text-slate-700">LET'S WORK TOGETHER</h3>
                 <div className="space-y-4">
                   {[
                     { icon: <Phone className="h-5 w-5" />, label: "+91 8591872306", href: "tel:+918591872306" },
@@ -678,7 +678,7 @@ const Index = () => {
                     />
                   </div>
                   <Textarea 
-                    placeholder="Tell me about your project..." 
+                    placeholder="Tell me about your project — what do you need, and when do you need it?" 
                     rows={5}
                     className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl resize-none"
                     required
