@@ -681,6 +681,7 @@ const Index = () => {
                 <form onSubmit={handleContactSubmit} className="space-y-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-200 p-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <Input 
+                      name="name"
                       placeholder="Your Name" 
                       className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl h-12"
                       required
