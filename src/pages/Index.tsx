@@ -314,7 +314,7 @@ const Index = () => {
               <span className="text-slate-300">MY</span>{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">SKILLS</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Click on any skill to learn more about what I bring to the table.</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Every skill is sharpened to deliver measurable results for your brand. Tap any skill to see the tools I use.</p>
           </AnimatedSection>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
