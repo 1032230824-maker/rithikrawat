@@ -232,7 +232,7 @@ const Index = () => {
               {/* Glow behind phone */}
               <div className="absolute -inset-10 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-glow"></div>
               <a 
-                href="https://www.instagram.com/reel/DG8OLH7t0pH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+                href="https://www.instagram.com/reel/DL-KLLXzee6/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block relative group"
@@ -242,7 +242,7 @@ const Index = () => {
                     {/* Notch */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-b-2xl z-10"></div>
                     <iframe
-                      src="https://www.instagram.com/reel/DG8OLH7t0pH/embed"
+                      src="https://www.instagram.com/reel/DL-KLLXzee6/embed"
                       className="w-full h-full"
                       frameBorder="0"
                       scrolling="no"
