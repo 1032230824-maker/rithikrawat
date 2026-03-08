@@ -446,10 +446,10 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
-              <span className="text-slate-300">MY</span>{" "}
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">WORK</span>
+              <span className="text-slate-300">PERSONAL</span>{" "}
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">BRAND REELS</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Watch my latest reels directly — click to view on Instagram.</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-2xl mx-auto">Short-form content designed to build authority, capture attention, and turn viewers into clients. These reels showcase storytelling, editing precision, and high-impact visuals crafted for personal and business brands.</p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-3 gap-6">
@@ -457,31 +457,26 @@ const Index = () => {
               <AnimatedSection key={index} delay={index * 0.15}>
                 <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
                   <div className="relative w-full" style={{ paddingBottom: '177%' }}>
-                    <iframe
-                      src={item.embedUrl}
-                      className="absolute inset-0 w-full h-full"
-                      frameBorder="0"
-                      scrolling="no"
-                      allowTransparency={true}
-                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                    <video
+                      src={item.videoUrl}
+                      className="absolute inset-0 w-full h-full object-cover"
+                      autoPlay
+                      muted
+                      loop
+                      playsInline
                     />
                   </div>
-                  <div className="p-5 flex items-center justify-between">
+                  <div className="p-5 text-center">
                     <h3 className="font-poppins font-semibold text-slate-700">{item.title}</h3>
-                    <a 
-                      href={item.link} 
-                      target="_blank" 
-                      rel="noopener noreferrer" 
-                      className="inline-flex items-center gap-1.5 text-cyan-600 hover:text-cyan-700 transition-colors font-poppins text-sm group/link"
-                    >
-                      View
-                      <ExternalLink className="h-3.5 w-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
-                    </a>
                   </div>
                 </div>
               </AnimatedSection>
             ))}
           </div>
+
+          <AnimatedSection delay={0.5}>
+            <p className="font-poppins text-center text-slate-400 text-sm mt-12 italic">Helping brands and creators stand out through cinematic short-form video.</p>
+          </AnimatedSection>
         </div>
       </section>
 
