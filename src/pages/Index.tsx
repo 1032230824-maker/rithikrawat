@@ -125,10 +125,17 @@ const Index = () => {
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <span className="font-bebas text-2xl bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">RR</span>
           <div className="hidden md:flex gap-8 font-poppins text-sm text-slate-500">
-            {["About", "Skills", "Services", "Portfolio", "Contact"].map((item) => (
+            {[
+              { label: "About", id: "about" },
+              { label: "Skills", id: "skills" },
+              { label: "Services", id: "services" },
+              { label: "Portfolio", id: "portfolio" },
+              { label: "Real Estate", id: "real-estate" },
+              { label: "Contact", id: "contact" },
+            ].map((item) => (
               <button
-                key={item}
-                onClick={() => document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth' })}
+                key={item.id}
+                onClick={() => document.getElementById(item.id)?.scrollIntoView({ behavior: 'smooth' })}
                 className="hover:text-cyan-600 transition-colors duration-300 relative group"
               >
                 {item}
