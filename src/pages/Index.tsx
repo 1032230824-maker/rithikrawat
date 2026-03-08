@@ -43,19 +43,16 @@ const Index = () => {
 
   const portfolioItems = [
     {
-      title: "Brand Collaboration",
-      embedUrl: "https://www.instagram.com/reel/C_iaK_wCrOZ/embed",
-      link: "https://www.instagram.com/reel/C_iaK_wCrOZ/?igsh=MTlydXVsMmd0cjNzNA=="
+      title: "Personal Branding Reel",
+      videoUrl: "https://videos.pexels.com/video-files/5377684/5377684-sd_506_960_25fps.mp4",
     },
     {
-      title: "Travel Content",
-      embedUrl: "https://www.instagram.com/reel/DEnSchPTlXe/embed",
-      link: "https://www.instagram.com/reel/DEnSchPTlXe/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      title: "Storytelling Content Reel",
+      videoUrl: "https://videos.pexels.com/video-files/4678261/4678261-sd_506_960_25fps.mp4",
     },
     {
-      title: "Featured Reel",
-      embedUrl: "https://www.instagram.com/reel/DG8OLH7t0pH/embed",
-      link: "https://www.instagram.com/reel/DG8OLH7t0pH/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+      title: "Social Media Growth Reel",
+      videoUrl: "https://videos.pexels.com/video-files/5377700/5377700-sd_506_960_25fps.mp4",
     }
   ];
 
