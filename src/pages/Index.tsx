@@ -327,6 +327,50 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-28 px-4 bg-gradient-to-b from-slate-50/80 to-white">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
+              <span className="text-slate-300">MY PERSONAL</span>{" "}
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">INSTAGRAM VIDEOS</span>
+            </h2>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">A curated selection of my best work — watch the reels, see the editing style, and experience the storytelling firsthand.</p>
+          </AnimatedSection>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {portfolioItems.map((item, index) => (
+              <AnimatedSection key={index} delay={index * 0.15}>
+                <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                  <div className="relative w-full" style={{ paddingBottom: '177%' }}>
+                    <iframe
+                      src={item.embedUrl}
+                      className="absolute inset-0 w-full h-full"
+                      frameBorder="0"
+                      scrolling="no"
+                      allowTransparency={true}
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                    />
+                  </div>
+                  <div className="p-5 flex items-center justify-between">
+                    <h3 className="font-poppins font-semibold text-slate-700">{item.title}</h3>
+                    <a 
+                      href={item.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center gap-1.5 text-cyan-600 hover:text-cyan-700 transition-colors font-poppins text-sm group/link"
+                    >
+                      View
+                      <ExternalLink className="h-3.5 w-3.5 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
+                    </a>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Skills Section - Interactive Bento Grid */}
       <section id="skills" className="py-28 px-4 bg-gradient-to-b from-slate-50/80 to-white">
         <div className="max-w-6xl mx-auto">
