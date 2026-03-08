@@ -488,6 +488,53 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Real Estate Videos Section */}
+      <section id="real-estate" className="py-28 px-4 bg-gradient-to-b from-white to-slate-50/80">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <div className="text-center mb-6">
+              <span className="inline-block font-poppins text-xs font-bold tracking-[0.3em] uppercase text-cyan-500 bg-cyan-50 px-4 py-2 rounded-full mb-4">Premium Content</span>
+            </div>
+            <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
+              <span className="text-slate-300">MY</span>{" "}
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">REAL ESTATE WORK</span>
+            </h2>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-2xl mx-auto">
+              I shoot and edit cinematic reels for real estate brands to help them attract more clients. Here's a glimpse of my premium video work.
+            </p>
+          </AnimatedSection>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { title: "Property Showcase Reel 1", src: "/videos/real-estate-1.mp4" },
+              { title: "Property Showcase Reel 2", src: "/videos/real-estate-2.mp4" },
+              { title: "Property Showcase Reel 3", src: "/videos/real-estate-3.mp4" },
+            ].map((reel, index) => (
+              <AnimatedSection key={index} delay={index * 0.15}>
+                <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
+                  <div className="relative w-full" style={{ paddingBottom: '177%' }}>
+                    <video
+                      className="absolute inset-0 w-full h-full object-cover"
+                      controls
+                      playsInline
+                      preload="metadata"
+                      poster=""
+                    >
+                      <source src={reel.src} type="video/mp4" />
+                      Your browser does not support video playback.
+                    </video>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="font-poppins font-semibold text-slate-700">{reel.title}</h3>
+                    <p className="font-poppins text-sm text-slate-400 mt-1">Shot & Edited by Rithik Rawat</p>
+                  </div>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Contact Section */}
       <section id="contact" className="py-28 px-4">
         <div className="max-w-5xl mx-auto">
