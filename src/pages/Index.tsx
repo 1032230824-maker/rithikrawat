@@ -379,8 +379,8 @@ const Index = () => {
               <span className="text-slate-300">WHAT I</span>{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">OFFER</span>
             </h2>
-            <p className="font-poppins text-center text-slate-500 mb-4 text-lg">Content Creator & Social Media Growth Partner</p>
-            <p className="font-poppins text-center text-slate-400 mb-16 text-sm max-w-2xl mx-auto">Helping brands grow through compelling visuals, strategic content, and data-driven social media management.</p>
+            <p className="font-poppins text-center text-slate-500 mb-4 text-lg">Your Content Partner for Growth, Visibility & Engagement</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 text-sm max-w-2xl mx-auto">Whether you're struggling with low engagement, inconsistent content, or need premium reels that convert — I handle everything from shoot to strategy so you can focus on your business.</p>
           </AnimatedSection>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
