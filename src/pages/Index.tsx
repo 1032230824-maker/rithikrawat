@@ -385,12 +385,12 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
             {[
-              { icon: "🎥", title: "VIDEOGRAPHY", color: "from-cyan-500 to-blue-500", items: ["Product videography", "Event & brand shoots", "Instagram reel shoots", "Behind-the-scenes content"] },
-              { icon: "🎬", title: "VIDEO EDITING", color: "from-blue-500 to-indigo-500", items: ["Reel & Shorts editing", "YouTube video editing", "Color grading & transitions", "Subtitle & caption editing"] },
-              { icon: "📱", title: "SOCIAL MEDIA", color: "from-indigo-500 to-purple-500", items: ["Instagram page management", "Content calendar creation", "Grid aesthetic design", "Caption writing & scheduling"] },
-              { icon: "📸", title: "CONTENT CREATION", color: "from-purple-500 to-pink-500", items: ["Brand content shooting", "Lifestyle product shoots", "Reel concepts & scripting", "Content direction"] },
-              { icon: "🎨", title: "GRAPHIC DESIGN", color: "from-pink-500 to-rose-500", items: ["Post & carousel design", "Story creatives", "Brand visual templates", "Canva / Photoshop"] },
-              { icon: "🧠", title: "STRATEGY", color: "from-rose-500 to-orange-500", items: ["Instagram growth strategy", "Campaign planning", "Engagement optimization", "Analytics & insights"] },
+              { icon: "🎥", title: "VIDEOGRAPHY", color: "from-cyan-500 to-blue-500", items: ["Professional product & brand videography", "On-location event coverage", "Instagram-ready reel shoots", "Behind-the-scenes content that builds trust"] },
+              { icon: "🎬", title: "VIDEO EDITING", color: "from-blue-500 to-indigo-500", items: ["Reel & Shorts editing that hooks in 3 seconds", "Long-form YouTube video editing", "Cinematic color grading & smooth transitions", "Subtitles & captions for higher retention"] },
+              { icon: "📱", title: "SOCIAL MEDIA", color: "from-indigo-500 to-purple-500", items: ["Full Instagram page management", "Strategic content calendar planning", "Feed aesthetic & grid design", "Caption writing, hashtags & scheduling"] },
+              { icon: "📸", title: "CONTENT CREATION", color: "from-purple-500 to-pink-500", items: ["End-to-end brand content production", "Lifestyle & product photography", "Reel concepts, scripting & creative direction", "Content that tells your brand story"] },
+              { icon: "🎨", title: "GRAPHIC DESIGN", color: "from-pink-500 to-rose-500", items: ["High-impact post & carousel design", "Story creatives that drive engagement", "Branded visual templates for consistency", "Canva & Photoshop design expertise"] },
+              { icon: "🧠", title: "GROWTH STRATEGY", color: "from-rose-500 to-orange-500", items: ["Instagram growth strategy & roadmaps", "Campaign planning & execution", "Engagement optimization techniques", "Analytics-driven content decisions"] },
             ].map((service, index) => (
               <AnimatedSection key={index} delay={index * 0.08}>
                 <div className="group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 hover:border-transparent transition-all duration-500 hover:shadow-xl hover:-translate-y-1 overflow-hidden h-full">
