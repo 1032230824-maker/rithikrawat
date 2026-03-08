@@ -584,7 +584,7 @@ const Index = () => {
                   <span className="inline-block font-poppins text-xs font-bold tracking-wider uppercase bg-white/20 px-3 py-1 rounded-full mb-3">Most Popular</span>
                   <h3 className="font-bebas text-2xl mb-1">GROWTH PACKAGE</h3>
                   <p className="font-poppins text-lg font-bold mb-3">₹18,000 <span className="text-sm font-normal opacity-80">/ month</span></p>
-                  <p className="font-poppins text-sm opacity-90 mb-4">Designed for agents and developers who want stronger visibility and premium presentation.</p>
+                  <p className="font-poppins text-sm opacity-90 mb-4">Built for agents and developers who want premium-quality presentation that sets them apart from the competition.</p>
                   <ul className="space-y-2.5 mb-6">
                     {["4 Professional property reels", "Dedicated camera property shoot", "Advanced cinematic editing", "Professional cinematic color grading", "Property highlight reels optimized for Instagram"].map((item, i) => (
                       <li key={i} className="font-poppins text-sm flex items-center gap-2.5">
