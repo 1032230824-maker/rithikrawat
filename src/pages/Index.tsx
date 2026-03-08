@@ -27,6 +27,9 @@ const AnimatedSection = ({ children, className = "", delay = 0 }: { children: Re
 const Index = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [activeSkill, setActiveSkill] = useState<number | null>(null);
+  const [contactName, setContactName] = useState('');
+  const [contactEmail, setContactEmail] = useState('');
+  const [contactMessage, setContactMessage] = useState('');
   const { toast } = useToast();
 
   useEffect(() => {
@@ -35,25 +38,23 @@ const Index = () => {
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const name = (form.elements.namedItem('name') as HTMLInputElement)?.value?.trim() || '';
-    const email = (form.elements.namedItem('email') as HTMLInputElement)?.value?.trim() || '';
-    const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value?.trim() || '';
 
-    if (!name || !email || !message) {
+    if (!contactName.trim() || !contactEmail.trim() || !contactMessage.trim()) {
       toast({ title: "Please fill all fields", description: "All fields are required." });
       return;
     }
 
-    const whatsappMessage = `Hi Rithik! I'm *${name}*.\n\nEmail: ${email}\n\nProject Details:\n${message}`;
-    const whatsappUrl = `https://wa.me/918591872306?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappText = `Hi Rithik! I'm *${contactName.trim()}*.\n\nEmail: ${contactEmail.trim()}\n\nProject Details:\n${contactMessage.trim()}`;
+    const whatsappUrl = `https://wa.me/918591872306?text=${encodeURIComponent(whatsappText)}`;
     window.open(whatsappUrl, '_blank');
 
     toast({
       title: "Redirecting to WhatsApp! 📱",
       description: "Your message is ready to send. Just hit send on WhatsApp!",
     });
-    form.reset();
+    setContactName('');
+    setContactEmail('');
+    setContactMessage('');
   };
 
   const portfolioItems = [
