@@ -584,7 +584,7 @@ const Index = () => {
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">REAL ESTATE WORK</span>
             </h2>
             <p className="font-poppins text-center text-slate-400 mb-16 max-w-2xl mx-auto">
-              Cinematic real estate reels designed to showcase properties at their best — helping agents and developers attract serious buyers and generate more inquiries through powerful visual storytelling.
+              Properties sell faster with the right visuals. These cinematic reels are designed to attract serious buyers, generate more inquiries, and increase your listing's visibility on Instagram — giving your properties the premium presentation they deserve.
             </p>
           </AnimatedSection>
 
