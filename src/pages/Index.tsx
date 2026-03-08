@@ -68,42 +68,42 @@ const Index = () => {
     { 
       name: "Video Editing", 
       icon: <Video className="h-7 w-7" />,
-      description: "Professional video editing with cinematic transitions, color grading, and sound design.",
+      description: "Transforming raw footage into polished, high-retention videos that keep viewers watching till the end.",
       tools: ["Premiere Pro", "After Effects", "DaVinci Resolve"],
       color: "from-violet-500 to-fuchsia-500"
     },
     { 
       name: "Reels & Shorts", 
       icon: <Play className="h-7 w-7" />,
-      description: "Thumb-stopping vertical content optimized for Instagram, YouTube Shorts & TikTok.",
+      description: "Creating scroll-stopping vertical content engineered for maximum reach, engagement, and virality.",
       tools: ["CapCut", "Instagram", "TikTok"],
       color: "from-blue-500 to-cyan-400"
     },
     { 
       name: "Instagram Strategy", 
       icon: <Target className="h-7 w-7" />,
-      description: "Data-driven growth strategies, hashtag research, and engagement optimization.",
+      description: "Building data-backed growth strategies that turn followers into engaged communities and paying clients.",
       tools: ["Meta Business Suite", "Analytics", "Insights"],
       color: "from-emerald-500 to-teal-400"
     },
     { 
       name: "Graphic Design", 
       icon: <Palette className="h-7 w-7" />,
-      description: "Scroll-stopping graphics, carousels, stories, and brand visual templates.",
+      description: "Designing on-brand visuals — from carousels to stories — that make your feed look cohesive and premium.",
       tools: ["Canva", "Photoshop", "Illustrator"],
       color: "from-orange-500 to-amber-400"
     },
     { 
       name: "Thumbnail Creation", 
       icon: <Puzzle className="h-7 w-7" />,
-      description: "High-CTR thumbnails that drive clicks and views for YouTube and social media.",
+      description: "Crafting high-CTR thumbnails that grab attention in crowded feeds and drive more clicks to your content.",
       tools: ["Photoshop", "Canva", "Figma"],
       color: "from-rose-500 to-pink-400"
     },
     { 
       name: "Social Media Analytics", 
       icon: <BarChart3 className="h-7 w-7" />,
-      description: "Deep performance analysis, A/B testing insights, and content optimization.",
+      description: "Turning performance data into actionable insights so every piece of content works harder for your brand.",
       tools: ["Meta Analytics", "Google Analytics", "Sprout Social"],
       color: "from-sky-500 to-indigo-400"
     }
