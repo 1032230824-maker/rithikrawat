@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Instagram, Linkedin, Phone, Mail, Play, ExternalLink, ArrowDown, Sparkles, Video, Palette, BarChart3, Target, Puzzle, ChevronRight } from "lucide-react";
+import { Instagram, Linkedin, Phone, Mail, Play, ExternalLink, ArrowDown, Sparkles, Video, Palette, BarChart3, Target, Puzzle, ChevronRight, Building2, User, Store, Megaphone, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { motion, useInView } from "framer-motion";
 
@@ -191,16 +191,19 @@ const Index = () => {
           >
             <div className="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-200/50 rounded-full px-4 py-1.5 mb-6">
               <Sparkles className="h-4 w-4 text-cyan-500" />
-              <span className="font-poppins text-sm text-cyan-600">Open for new projects</span>
+              <span className="font-poppins text-sm text-cyan-600">Currently accepting new projects</span>
             </div>
             <h1 className="font-bebas text-6xl md:text-7xl lg:text-8xl font-bold mb-4 leading-[0.9]">
-              <span className="text-slate-800">TURNING</span><br />
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">IDEAS INTO</span><br />
-              <span className="text-slate-800">HIGH-PERFORMING</span>{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">CONTENT</span>
+              <span className="text-slate-800">HELPING</span><br />
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">BRANDS GROW</span><br />
+              <span className="text-slate-800">WITH</span>{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">POWERFUL CONTENT</span>
             </h1>
-            <p className="font-poppins text-lg text-slate-500 mb-8 max-w-md mx-auto lg:mx-0">
-              I help brands, creators, and real estate businesses grow on Instagram with cinematic reels, strategic content, and scroll-stopping visuals that convert viewers into clients.
+            <p className="font-poppins text-lg text-slate-500 mb-4 max-w-md mx-auto lg:mx-0">
+              I create scroll-stopping reels, cinematic real estate videos, and data-driven content strategies that help brands, creators, and real estate professionals grow on Instagram and convert followers into clients.
+            </p>
+            <p className="font-poppins text-sm text-slate-400 mb-8 max-w-md mx-auto lg:mx-0 italic">
+              Trusted by brands, creators, and real estate professionals across Mumbai.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
@@ -208,14 +211,14 @@ const Index = () => {
                 onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Play className="mr-2 h-5 w-5" />
-                Watch My Work
+                View My Portfolio
               </Button>
               <Button 
                 variant="outline"
                 className="border-slate-300 text-slate-600 px-8 py-6 rounded-full text-lg font-poppins hover:border-cyan-400 hover:text-cyan-600 transition-all duration-300"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Let's Talk
+                Start Your Project
                 <ChevronRight className="ml-1 h-5 w-5" />
               </Button>
             </div>
@@ -327,6 +330,54 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Who I Help Section */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-slate-50/50">
+        <div className="max-w-6xl mx-auto">
+          <AnimatedSection>
+            <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
+              <span className="text-slate-300">WHO I</span>{" "}
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">HELP</span>
+            </h2>
+            <p className="font-poppins text-center text-slate-400 mb-12 max-w-lg mx-auto">I work with ambitious brands and professionals who want content that actually drives results.</p>
+          </AnimatedSection>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            {[
+              { icon: <Building2 className="h-6 w-6" />, title: "Real Estate Agents & Developers", desc: "Cinematic property reels that attract serious buyers" },
+              { icon: <User className="h-6 w-6" />, title: "Personal Brands & Creators", desc: "Authority-building content that grows your audience" },
+              { icon: <Store className="h-6 w-6" />, title: "Local Businesses & Startups", desc: "Social media content that puts you on the map" },
+              { icon: <Megaphone className="h-6 w-6" />, title: "Brands & Agencies", desc: "High-quality reels and strategies that convert" },
+            ].map((item, index) => (
+              <AnimatedSection key={index} delay={index * 0.1}>
+                <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-6 border border-slate-200 hover:shadow-lg hover:-translate-y-1 transition-all duration-500 text-center h-full">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-4 bg-gradient-to-br from-cyan-500 to-blue-500 text-white shadow-lg">
+                    {item.icon}
+                  </div>
+                  <h3 className="font-bebas text-lg mb-2 text-slate-700">{item.title}</h3>
+                  <p className="font-poppins text-xs text-slate-400">{item.desc}</p>
+                </div>
+              </AnimatedSection>
+            ))}
+          </div>
+
+          {/* Results indicators */}
+          <AnimatedSection>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mt-12">
+              {[
+                { value: "50+", label: "Projects Completed" },
+                { value: "2+", label: "Years Experience" },
+                { value: "1000s", label: "Content Views on Instagram" },
+                { value: "10+", label: "Brands & Creators Served" },
+              ].map((stat, i) => (
+                <div key={i} className="text-center py-4">
+                  <p className="font-bebas text-3xl bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">{stat.value}</p>
+                  <p className="font-poppins text-xs text-slate-400 mt-1">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+          </AnimatedSection>
+        </div>
+      </section>
+
       {/* Portfolio Section */}
       <section id="portfolio" className="py-28 px-4 bg-gradient-to-b from-slate-50/80 to-white">
         <div className="max-w-6xl mx-auto">
@@ -335,7 +386,7 @@ const Index = () => {
               <span className="text-slate-300">MY PERSONAL</span>{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">INSTAGRAM VIDEOS</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">A curated selection of my best work — watch the reels, see the editing style, and experience the storytelling firsthand.</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Each video is crafted to help brands attract attention, boost engagement, and present their products or properties in a premium, scroll-stopping way.</p>
           </AnimatedSection>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -511,7 +562,7 @@ const Index = () => {
                     className="bg-white text-blue-600 hover:bg-white/90 font-poppins font-semibold rounded-full px-8 py-5 hover:shadow-lg transition-all duration-300 hover:scale-105"
                     onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                    Get a Quote →
+                    Request Project Quote →
                   </Button>
                 </div>
               </div>
@@ -533,7 +584,7 @@ const Index = () => {
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">REAL ESTATE WORK</span>
             </h2>
             <p className="font-poppins text-center text-slate-400 mb-16 max-w-2xl mx-auto">
-              Cinematic real estate reels designed to showcase properties at their best — helping agents and developers attract serious buyers and generate more inquiries through powerful visual storytelling.
+              Properties sell faster with the right visuals. These cinematic reels are designed to attract serious buyers, generate more inquiries, and increase your listing's visibility on Instagram — giving your properties the premium presentation they deserve.
             </p>
           </AnimatedSection>
 
@@ -619,7 +670,7 @@ const Index = () => {
                     className="bg-white text-blue-600 hover:bg-white/90 font-poppins font-semibold rounded-full px-8 py-5 hover:shadow-lg transition-all duration-300 hover:scale-105"
                     onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                    Get a Quote →
+                    Request Project Quote →
                   </Button>
                 </div>
               </div>
@@ -649,17 +700,21 @@ const Index = () => {
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
-              <span className="text-slate-300">LET'S</span>{" "}
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">CONNECT</span>
+              <span className="text-slate-300">READY TO</span>{" "}
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">START?</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Have a project idea or need content for your brand? Send a message through the form, call me directly, or connect on Instagram — I'd love to hear from you.</p>
+            <p className="font-poppins text-center text-slate-400 mb-4 max-w-lg mx-auto">Have a project in mind? Tell me about your idea using the form below and I'll get back to you. You can also reach me via email, WhatsApp, or Instagram — whatever works best for you.</p>
+            <div className="flex items-center justify-center gap-2 mb-16">
+              <Clock className="h-4 w-4 text-cyan-500" />
+              <p className="font-poppins text-sm text-cyan-600 font-medium">Limited slots available each month — reach out early to secure your spot.</p>
+            </div>
           </AnimatedSection>
           
           <AnimatedSection delay={0.2}>
             <div className="grid md:grid-cols-5 gap-8">
               {/* Contact Info */}
               <div className="md:col-span-2 space-y-6">
-                <h3 className="font-bebas text-2xl text-slate-700">LET'S WORK TOGETHER</h3>
+                <h3 className="font-bebas text-2xl text-slate-700">LET'S BRING YOUR VISION TO LIFE</h3>
                 <div className="space-y-4">
                   {[
                     { icon: <Phone className="h-5 w-5" />, label: "+91 8591872306", href: "tel:+918591872306" },
