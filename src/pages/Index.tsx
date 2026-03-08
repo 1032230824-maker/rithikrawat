@@ -637,7 +637,7 @@ const Index = () => {
             <div className="grid md:grid-cols-5 gap-8">
               {/* Contact Info */}
               <div className="md:col-span-2 space-y-6">
-                <h3 className="font-bebas text-2xl text-slate-700">REACH OUT</h3>
+                <h3 className="font-bebas text-2xl text-slate-700">LET'S WORK TOGETHER</h3>
                 <div className="space-y-4">
                   {[
                     { icon: <Phone className="h-5 w-5" />, label: "+91 8591872306", href: "tel:+918591872306" },
