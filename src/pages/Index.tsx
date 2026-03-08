@@ -242,7 +242,7 @@ const Index = () => {
                     {/* Notch */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-24 h-6 bg-black rounded-b-2xl z-10"></div>
                     <iframe
-                      src="https://www.instagram.com/reel/DG8OLH7t0pH/embed"
+                      src="https://www.instagram.com/reel/DL-KLLXzee6/embed"
                       className="w-full h-full"
                       frameBorder="0"
                       scrolling="no"
