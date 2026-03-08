@@ -405,17 +405,15 @@ const Index = () => {
             ))}
           </div>
 
-          {/* Pricing Packages */}
+          {/* Package CTA */}
           <AnimatedSection>
-            <div className="grid md:grid-cols-3 gap-5">
-              {/* Starter Package */}
+            <div className="grid md:grid-cols-2 gap-5">
               <div className="bg-gradient-to-br from-slate-50 to-cyan-50/50 border border-slate-200 rounded-2xl p-8">
-                <div className="text-3xl mb-3">🎬</div>
-                <h3 className="font-bebas text-2xl mb-1 text-slate-700">STARTER PACKAGE</h3>
-                <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹10,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
-                <p className="font-poppins text-sm text-slate-500 mb-4">Perfect for real estate agents who want consistent property content on social media.</p>
+                <div className="text-3xl mb-3">🌟</div>
+                <h3 className="font-bebas text-2xl mb-3 text-slate-700">PERSONAL BRAND CONTENT</h3>
+                <p className="font-poppins text-sm text-slate-500 mb-4">For founders, influencers, and creators building their personal brand.</p>
                 <ul className="space-y-2.5">
-                  {["4 Cinematic property reels per month", "iPhone professional property shoot", "High-quality reel editing", "Cinematic color grading", "1 property showcase reel delivered every week"].map((item, i) => (
+                  {["Personal branding reels", "Talking-head content editing", "LinkedIn & Instagram content"].map((item, i) => (
                     <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
                       <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
                       {item}
@@ -423,24 +421,22 @@ const Index = () => {
                   ))}
                 </ul>
               </div>
-
-              {/* Growth Package */}
-              <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl p-8 text-white relative overflow-hidden">
+              <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl p-8 text-white flex flex-col justify-between relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
                 <div className="relative z-10">
-                  <span className="inline-block font-poppins text-xs font-bold tracking-wider uppercase bg-white/20 px-3 py-1 rounded-full mb-3">Most Popular</span>
-                  <h3 className="font-bebas text-2xl mb-1">GROWTH PACKAGE</h3>
-                  <p className="font-poppins text-lg font-bold mb-3">₹18,000 <span className="text-sm font-normal opacity-80">/ month</span></p>
-                  <p className="font-poppins text-sm opacity-90 mb-4">Designed for agents and developers who want stronger visibility and premium presentation.</p>
-                  <ul className="space-y-2.5 mb-6">
-                    {["4 Professional property reels", "Dedicated camera property shoot", "Advanced cinematic editing", "Professional cinematic color grading", "Property highlight reels optimized for Instagram"].map((item, i) => (
+                  <h3 className="font-bebas text-3xl mb-4">CONTENT CREATION PACKAGE</h3>
+                  <ul className="space-y-3 mb-8">
+                    {["4 reels shoot + edit", "8 Instagram posts designed", "Story creatives", "Content planning & strategy"].map((item, i) => (
                       <li key={i} className="font-poppins text-sm flex items-center gap-2.5">
                         <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">✓</span>
                         {item}
                       </li>
                     ))}
                   </ul>
+                </div>
+                <div className="relative z-10">
+                  <p className="font-poppins text-sm opacity-80 mb-4">Starting from <span className="text-2xl font-bold">₹15k</span>/month</p>
                   <Button 
                     className="bg-white text-blue-600 hover:bg-white/90 font-poppins font-semibold rounded-full px-8 py-5 hover:shadow-lg transition-all duration-300 hover:scale-105"
                     onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
@@ -448,22 +444,6 @@ const Index = () => {
                     Get a Quote →
                   </Button>
                 </div>
-              </div>
-
-              {/* Premium Package */}
-              <div className="bg-gradient-to-br from-slate-50 to-cyan-50/50 border border-slate-200 rounded-2xl p-8">
-                <div className="text-3xl mb-3">👑</div>
-                <h3 className="font-bebas text-2xl mb-1 text-slate-700">PREMIUM PACKAGE</h3>
-                <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹30,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
-                <p className="font-poppins text-sm text-slate-500 mb-4">For developers and luxury property marketing who want high-end cinematic presentation.</p>
-                <ul className="space-y-2.5">
-                  {["8 Cinematic property reels per month", "Professional camera shoot", "High-end cinematic editing and transitions", "Premium cinematic color grading", "Luxury property showcase storytelling style"].map((item, i) => (
-                    <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
               </div>
             </div>
           </AnimatedSection>
@@ -567,6 +547,73 @@ const Index = () => {
               </AnimatedSection>
             ))}
           </div>
+
+          {/* Real Estate Pricing Packages */}
+          <AnimatedSection>
+            <h3 className="font-bebas text-3xl md:text-4xl text-center mt-20 mb-10">
+              <span className="text-slate-300">REAL ESTATE</span>{" "}
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">PACKAGES</span>
+            </h3>
+            <div className="grid md:grid-cols-3 gap-5">
+              {/* Starter Package */}
+              <div className="bg-gradient-to-br from-slate-50 to-cyan-50/50 border border-slate-200 rounded-2xl p-8">
+                <div className="text-3xl mb-3">🎬</div>
+                <h3 className="font-bebas text-2xl mb-1 text-slate-700">STARTER PACKAGE</h3>
+                <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹10,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
+                <p className="font-poppins text-sm text-slate-500 mb-4">Perfect for real estate agents who want consistent property content on social media.</p>
+                <ul className="space-y-2.5">
+                  {["4 Cinematic property reels per month", "iPhone professional property shoot", "High-quality reel editing", "Cinematic color grading", "1 property showcase reel delivered every week"].map((item, i) => (
+                    <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Growth Package */}
+              <div className="bg-gradient-to-br from-cyan-500 to-blue-600 rounded-2xl p-8 text-white relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-40 h-40 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+                <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
+                <div className="relative z-10">
+                  <span className="inline-block font-poppins text-xs font-bold tracking-wider uppercase bg-white/20 px-3 py-1 rounded-full mb-3">Most Popular</span>
+                  <h3 className="font-bebas text-2xl mb-1">GROWTH PACKAGE</h3>
+                  <p className="font-poppins text-lg font-bold mb-3">₹18,000 <span className="text-sm font-normal opacity-80">/ month</span></p>
+                  <p className="font-poppins text-sm opacity-90 mb-4">Designed for agents and developers who want stronger visibility and premium presentation.</p>
+                  <ul className="space-y-2.5 mb-6">
+                    {["4 Professional property reels", "Dedicated camera property shoot", "Advanced cinematic editing", "Professional cinematic color grading", "Property highlight reels optimized for Instagram"].map((item, i) => (
+                      <li key={i} className="font-poppins text-sm flex items-center gap-2.5">
+                        <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">✓</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button 
+                    className="bg-white text-blue-600 hover:bg-white/90 font-poppins font-semibold rounded-full px-8 py-5 hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+                  >
+                    Get a Quote →
+                  </Button>
+                </div>
+              </div>
+
+              {/* Premium Package */}
+              <div className="bg-gradient-to-br from-slate-50 to-cyan-50/50 border border-slate-200 rounded-2xl p-8">
+                <div className="text-3xl mb-3">👑</div>
+                <h3 className="font-bebas text-2xl mb-1 text-slate-700">PREMIUM PACKAGE</h3>
+                <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹30,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
+                <p className="font-poppins text-sm text-slate-500 mb-4">For developers and luxury property marketing who want high-end cinematic presentation.</p>
+                <ul className="space-y-2.5">
+                  {["8 Cinematic property reels per month", "Professional camera shoot", "High-end cinematic editing and transitions", "Premium cinematic color grading", "Luxury property showcase storytelling style"].map((item, i) => (
+                    <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
+                      <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </AnimatedSection>
         </div>
       </section>
 
