@@ -35,10 +35,25 @@ const Index = () => {
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const name = (form.elements.namedItem('name') as HTMLInputElement)?.value?.trim() || '';
+    const email = (form.elements.namedItem('email') as HTMLInputElement)?.value?.trim() || '';
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value?.trim() || '';
+
+    if (!name || !email || !message) {
+      toast({ title: "Please fill all fields", description: "All fields are required." });
+      return;
+    }
+
+    const whatsappMessage = `Hi Rithik! I'm *${name}*.\n\nEmail: ${email}\n\nProject Details:\n${message}`;
+    const whatsappUrl = `https://wa.me/918591872306?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+
     toast({
-      title: "Message Sent! 🚀",
-      description: "Thanks for reaching out! I'll get back to you soon.",
+      title: "Redirecting to WhatsApp! 📱",
+      description: "Your message is ready to send. Just hit send on WhatsApp!",
     });
+    form.reset();
   };
 
   const portfolioItems = [
@@ -666,11 +681,13 @@ const Index = () => {
                 <form onSubmit={handleContactSubmit} className="space-y-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-200 p-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <Input 
+                      name="name"
                       placeholder="Your Name" 
                       className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl h-12"
                       required
                     />
                     <Input 
+                      name="email"
                       type="email" 
                       placeholder="Your Email" 
                       className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl h-12"
@@ -678,6 +695,7 @@ const Index = () => {
                     />
                   </div>
                   <Textarea 
+                    name="message"
                     placeholder="Tell me about your project — what do you need, and when do you need it?" 
                     rows={5}
                     className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl resize-none"
