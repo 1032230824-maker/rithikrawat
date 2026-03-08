@@ -607,7 +607,7 @@ const Index = () => {
                 <div className="text-3xl mb-3">👑</div>
                 <h3 className="font-bebas text-2xl mb-1 text-slate-700">PREMIUM PACKAGE</h3>
                 <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹30,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
-                <p className="font-poppins text-sm text-slate-500 mb-4">For developers and luxury property marketing who want high-end cinematic presentation.</p>
+                <p className="font-poppins text-sm text-slate-500 mb-4">For luxury developments and high-end property marketing that demands the highest level of cinematic production.</p>
                 <ul className="space-y-2.5">
                   {["8 Cinematic property reels per month", "Professional camera shoot", "High-end cinematic editing and transitions", "Premium cinematic color grading", "Luxury property showcase storytelling style"].map((item, i) => (
                     <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
