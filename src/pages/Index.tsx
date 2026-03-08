@@ -630,7 +630,7 @@ const Index = () => {
               <span className="text-slate-300">LET'S</span>{" "}
               <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">CONNECT</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Have a project in mind? Drop a message and let's create something amazing together.</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Have a project idea or need content for your brand? Send a message through the form, call me directly, or connect on Instagram — I'd love to hear from you.</p>
           </AnimatedSection>
           
           <AnimatedSection delay={0.2}>
