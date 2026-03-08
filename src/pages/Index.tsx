@@ -695,6 +695,7 @@ const Index = () => {
                     />
                   </div>
                   <Textarea 
+                    name="message"
                     placeholder="Tell me about your project — what do you need, and when do you need it?" 
                     rows={5}
                     className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl resize-none"
