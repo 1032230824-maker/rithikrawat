@@ -700,10 +700,14 @@ const Index = () => {
         <div className="max-w-5xl mx-auto">
           <AnimatedSection>
             <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
-              <span className="text-slate-300">LET'S</span>{" "}
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">CONNECT</span>
+              <span className="text-slate-300">READY TO</span>{" "}
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">START?</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Have a project idea or need content for your brand? Send a message through the form, call me directly, or connect on Instagram — I'd love to hear from you.</p>
+            <p className="font-poppins text-center text-slate-400 mb-4 max-w-lg mx-auto">Have a project in mind? Tell me about your idea using the form below and I'll get back to you. You can also reach me via email, WhatsApp, or Instagram — whatever works best for you.</p>
+            <div className="flex items-center justify-center gap-2 mb-16">
+              <Clock className="h-4 w-4 text-cyan-500" />
+              <p className="font-poppins text-sm text-cyan-600 font-medium">Limited slots available each month — reach out early to secure your spot.</p>
+            </div>
           </AnimatedSection>
           
           <AnimatedSection delay={0.2}>
