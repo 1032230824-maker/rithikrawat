@@ -449,10 +449,10 @@ const Index = () => {
         <div className="max-w-6xl mx-auto">
           <AnimatedSection>
             <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
-              <span className="text-slate-300">MY</span>{" "}
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">WORK</span>
+              <span className="text-slate-300">MY PERSONAL</span>{" "}
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">INSTAGRAM VIDEOS</span>
             </h2>
-            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Watch my latest reels directly — click to view on Instagram.</p>
+            <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Premium Content — Watch my latest reels directly, click to view on Instagram.</p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-3 gap-6">
