@@ -35,10 +35,25 @@ const Index = () => {
 
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const name = (form.elements.namedItem('name') as HTMLInputElement)?.value?.trim() || '';
+    const email = (form.elements.namedItem('email') as HTMLInputElement)?.value?.trim() || '';
+    const message = (form.elements.namedItem('message') as HTMLTextAreaElement)?.value?.trim() || '';
+
+    if (!name || !email || !message) {
+      toast({ title: "Please fill all fields", description: "All fields are required." });
+      return;
+    }
+
+    const whatsappMessage = `Hi Rithik! I'm *${name}*.\n\nEmail: ${email}\n\nProject Details:\n${message}`;
+    const whatsappUrl = `https://wa.me/918591872306?text=${encodeURIComponent(whatsappMessage)}`;
+    window.open(whatsappUrl, '_blank');
+
     toast({
-      title: "Message Sent! 🚀",
-      description: "Thanks for reaching out! I'll get back to you soon.",
+      title: "Redirecting to WhatsApp! 📱",
+      description: "Your message is ready to send. Just hit send on WhatsApp!",
     });
+    form.reset();
   };
 
   const portfolioItems = [
