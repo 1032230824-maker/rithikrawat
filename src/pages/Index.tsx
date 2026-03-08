@@ -432,7 +432,7 @@ const Index = () => {
                 <div className="relative z-10">
                   <h3 className="font-bebas text-3xl mb-4">CONTENT CREATION PACKAGE</h3>
                   <ul className="space-y-3 mb-8">
-                    {["4 reels shoot + edit", "8 Instagram posts designed", "Story creatives", "Content planning & strategy"].map((item, i) => (
+                    {["4 professional reels — shot & edited", "8 on-brand Instagram posts designed", "Engaging story creatives", "Monthly content planning & strategy"].map((item, i) => (
                       <li key={i} className="font-poppins text-sm flex items-center gap-2.5">
                         <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">✓</span>
                         {item}
