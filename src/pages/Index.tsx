@@ -416,7 +416,7 @@ const Index = () => {
               <div className="bg-gradient-to-br from-slate-50 to-cyan-50/50 border border-slate-200 rounded-2xl p-8">
                 <div className="text-3xl mb-3">🌟</div>
                 <h3 className="font-bebas text-2xl mb-3 text-slate-700">PERSONAL BRAND CONTENT</h3>
-                <p className="font-poppins text-sm text-slate-500 mb-4">For founders, influencers, and creators building their personal brand.</p>
+                <p className="font-poppins text-sm text-slate-500 mb-4">Elevate your personal brand with content that positions you as an authority in your space.</p>
                 <ul className="space-y-2.5">
                   {["Personal branding reels", "Talking-head content editing", "LinkedIn & Instagram content"].map((item, i) => (
                     <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
