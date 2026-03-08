@@ -682,13 +682,15 @@ const Index = () => {
                 <form onSubmit={handleContactSubmit} className="space-y-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-200 p-6">
                   <div className="grid sm:grid-cols-2 gap-4">
                     <Input 
-                      name="name"
+                      value={contactName}
+                      onChange={(e) => setContactName(e.target.value)}
                       placeholder="Your Name" 
                       className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl h-12"
                       required
                     />
                     <Input 
-                      name="email"
+                      value={contactEmail}
+                      onChange={(e) => setContactEmail(e.target.value)}
                       type="email" 
                       placeholder="Your Email" 
                       className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl h-12"
@@ -696,7 +698,8 @@ const Index = () => {
                     />
                   </div>
                   <Textarea 
-                    name="message"
+                    value={contactMessage}
+                    onChange={(e) => setContactMessage(e.target.value)}
                     placeholder="Tell me about your project — what do you need, and when do you need it?" 
                     rows={5}
                     className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl resize-none"
