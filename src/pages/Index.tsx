@@ -466,7 +466,7 @@ const Index = () => {
             <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Premium Content — Watch my latest reels directly, click to view on Instagram.</p>
           </AnimatedSection>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {portfolioItems.map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.15}>
                 <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
