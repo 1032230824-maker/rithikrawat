@@ -284,7 +284,7 @@ const Index = () => {
                   <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">RITHIK RAWAT?</span>
                 </h2>
                 <p className="font-poppins text-lg leading-relaxed text-slate-500 mb-8 text-center lg:text-left">
-                  Rithik Rawat is a passionate content creator, videographer, and video editor based in Mumbai. Currently pursuing EXTC Engineering at TCET, he combines creativity with technical skills to produce engaging reels and digital content. With a strong interest in social media strategy, he enjoys helping brands and communities grow through visually compelling storytelling.
+                  I'm Rithik Rawat — a content creator, videographer, and video editor based in Mumbai, currently pursuing EXTC Engineering at TCET. I combine my passion for cinematic storytelling with a deep understanding of social media to help brands stand out, grow their audience, and turn attention into real business results. From high-energy reels and brand collaborations to premium real estate videos, I craft content that doesn't just look good — it performs.
                 </p>
                 <div className="flex flex-wrap justify-center lg:justify-start gap-3">
                   <a href="https://www.instagram.com/sunita_creative_world?igsh=MXR0bDl4aG54d3U5Nw==" target="_blank" rel="noopener noreferrer">
