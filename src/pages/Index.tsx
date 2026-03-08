@@ -170,16 +170,16 @@ const Index = () => {
           >
             <div className="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-200/50 rounded-full px-4 py-1.5 mb-6">
               <Sparkles className="h-4 w-4 text-cyan-500" />
-              <span className="font-poppins text-sm text-cyan-600">Available for projects</span>
+              <span className="font-poppins text-sm text-cyan-600">Open for new projects</span>
             </div>
             <h1 className="font-bebas text-6xl md:text-7xl lg:text-8xl font-bold mb-4 leading-[0.9]">
-              <span className="text-slate-800">CONTENT</span><br />
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">CREATOR</span><br />
-              <span className="text-slate-800">&</span>{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">EDITOR</span>
+              <span className="text-slate-800">TURNING</span><br />
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">IDEAS INTO</span><br />
+              <span className="text-slate-800">HIGH-PERFORMING</span>{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">CONTENT</span>
             </h1>
             <p className="font-poppins text-lg text-slate-500 mb-8 max-w-md mx-auto lg:mx-0">
-              Turning raw ideas into viral content. Let's make your brand unforgettable.
+              I help brands, creators, and real estate businesses grow on Instagram with cinematic reels, strategic content, and scroll-stopping visuals that convert viewers into clients.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
