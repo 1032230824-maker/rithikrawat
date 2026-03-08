@@ -562,7 +562,7 @@ const Index = () => {
                     className="bg-white text-blue-600 hover:bg-white/90 font-poppins font-semibold rounded-full px-8 py-5 hover:shadow-lg transition-all duration-300 hover:scale-105"
                     onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                    Get a Quote →
+                    Request Project Quote →
                   </Button>
                 </div>
               </div>
