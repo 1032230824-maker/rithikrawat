@@ -506,27 +506,36 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-6">
             {[
-              { title: "Property Showcase Reel 1", src: "/videos/real-estate-1.mp4" },
-              { title: "Property Showcase Reel 2", src: "/videos/real-estate-2.mp4" },
-              { title: "Property Showcase Reel 3", src: "/videos/real-estate-3.mp4" },
+              { title: "Prestige Real Estate Reel", embedUrl: "https://www.instagram.com/reel/DVWhJbHjeOn/embed", link: "https://www.instagram.com/reel/DVWhJbHjeOn/" },
+              { title: "Property Showcase Reel", embedUrl: "https://www.instagram.com/reel/DVZUpsqjYIj/embed", link: "https://www.instagram.com/reel/DVZUpsqjYIj/" },
+              { title: "Luxury Property Tour", embedUrl: "https://www.instagram.com/reel/DVZOx1fDQZ8/embed", link: "https://www.instagram.com/reel/DVZOx1fDQZ8/" },
             ].map((reel, index) => (
               <AnimatedSection key={index} delay={index * 0.15}>
                 <div className="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-500">
                   <div className="relative w-full" style={{ paddingBottom: '177%' }}>
-                    <video
-                      className="absolute inset-0 w-full h-full object-cover"
-                      controls
-                      playsInline
-                      preload="metadata"
-                      poster=""
-                    >
-                      <source src={reel.src} type="video/mp4" />
-                      Your browser does not support video playback.
-                    </video>
+                    <iframe
+                      src={reel.embedUrl}
+                      className="absolute inset-0 w-full h-full"
+                      frameBorder="0"
+                      scrolling="no"
+                      allowTransparency={true}
+                      allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+                    />
                   </div>
-                  <div className="p-5">
-                    <h3 className="font-poppins font-semibold text-slate-700">{reel.title}</h3>
-                    <p className="font-poppins text-sm text-slate-400 mt-1">Shot & Edited by Rithik Rawat</p>
+                  <div className="p-5 flex items-center justify-between">
+                    <div>
+                      <h3 className="font-poppins font-semibold text-slate-700">{reel.title}</h3>
+                      <p className="font-poppins text-sm text-slate-400 mt-1">Shot & Edited by Rithik Rawat</p>
+                    </div>
+                    <a 
+                      href={reel.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="inline-flex items-center gap-1.5 text-cyan-600 hover:text-cyan-700 transition-colors font-poppins text-sm"
+                    >
+                      View
+                      <ExternalLink className="h-3.5 w-3.5" />
+                    </a>
                   </div>
                 </div>
               </AnimatedSection>
