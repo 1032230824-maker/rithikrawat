@@ -191,16 +191,19 @@ const Index = () => {
           >
             <div className="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-200/50 rounded-full px-4 py-1.5 mb-6">
               <Sparkles className="h-4 w-4 text-cyan-500" />
-              <span className="font-poppins text-sm text-cyan-600">Open for new projects</span>
+              <span className="font-poppins text-sm text-cyan-600">Currently accepting new projects</span>
             </div>
             <h1 className="font-bebas text-6xl md:text-7xl lg:text-8xl font-bold mb-4 leading-[0.9]">
-              <span className="text-slate-800">TURNING</span><br />
-              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">IDEAS INTO</span><br />
-              <span className="text-slate-800">HIGH-PERFORMING</span>{" "}
-              <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">CONTENT</span>
+              <span className="text-slate-800">HELPING</span><br />
+              <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">BRANDS GROW</span><br />
+              <span className="text-slate-800">WITH</span>{" "}
+              <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">POWERFUL CONTENT</span>
             </h1>
-            <p className="font-poppins text-lg text-slate-500 mb-8 max-w-md mx-auto lg:mx-0">
-              I help brands, creators, and real estate businesses grow on Instagram with cinematic reels, strategic content, and scroll-stopping visuals that convert viewers into clients.
+            <p className="font-poppins text-lg text-slate-500 mb-4 max-w-md mx-auto lg:mx-0">
+              I create scroll-stopping reels, cinematic real estate videos, and data-driven content strategies that help brands, creators, and real estate professionals grow on Instagram and convert followers into clients.
+            </p>
+            <p className="font-poppins text-sm text-slate-400 mb-8 max-w-md mx-auto lg:mx-0 italic">
+              Trusted by brands, creators, and real estate professionals across Mumbai.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button 
@@ -208,14 +211,14 @@ const Index = () => {
                 onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
               >
                 <Play className="mr-2 h-5 w-5" />
-                Watch My Work
+                View My Portfolio
               </Button>
               <Button 
                 variant="outline"
                 className="border-slate-300 text-slate-600 px-8 py-6 rounded-full text-lg font-poppins hover:border-cyan-400 hover:text-cyan-600 transition-all duration-300"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Let's Talk
+                Start Your Project
                 <ChevronRight className="ml-1 h-5 w-5" />
               </Button>
             </div>
