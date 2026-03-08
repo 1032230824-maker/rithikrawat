@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Instagram, Linkedin, Phone, Mail, Play, ExternalLink, ArrowDown, Sparkles, Video, Palette, BarChart3, Target, Puzzle, ChevronRight } from "lucide-react";
+import { Instagram, Linkedin, Phone, Mail, Play, ExternalLink, ArrowDown, Sparkles, Video, Palette, BarChart3, Target, Puzzle, ChevronRight, Building2, User, Store, Megaphone, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { motion, useInView } from "framer-motion";
 
