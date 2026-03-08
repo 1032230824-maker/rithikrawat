@@ -565,7 +565,7 @@ const Index = () => {
                 <div className="text-3xl mb-3">🎬</div>
                 <h3 className="font-bebas text-2xl mb-1 text-slate-700">STARTER PACKAGE</h3>
                 <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹10,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
-                <p className="font-poppins text-sm text-slate-500 mb-4">Perfect for real estate agents who want consistent property content on social media.</p>
+                <p className="font-poppins text-sm text-slate-500 mb-4">Ideal for real estate agents who want consistent, high-quality property content to stay visible on social media.</p>
                 <ul className="space-y-2.5">
                   {["4 Cinematic property reels per month", "iPhone professional property shoot", "High-quality reel editing", "Cinematic color grading", "1 property showcase reel delivered every week"].map((item, i) => (
                     <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
