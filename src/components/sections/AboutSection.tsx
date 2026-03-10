@@ -25,7 +25,7 @@ const AboutSection = () => {
                   transition={{ duration: 3, repeat: Infinity }}
                 >
                   <p className="font-bebas text-2xl text-cyan-600">50+</p>
-                  <p className="font-poppins text-xs text-slate-500">Projects</p>
+                  <p className="font-poppins text-xs text-slate-500">Projects Delivered</p>
                 </motion.div>
                 <motion.div
                   className="absolute -left-6 bottom-12 bg-white rounded-xl shadow-lg px-4 py-3 border border-slate-100"
@@ -33,17 +33,17 @@ const AboutSection = () => {
                   transition={{ duration: 3.5, repeat: Infinity }}
                 >
                   <p className="font-bebas text-2xl text-blue-600">2+</p>
-                  <p className="font-poppins text-xs text-slate-500">Years Exp.</p>
+                  <p className="font-poppins text-xs text-slate-500">Years in the Game</p>
                 </motion.div>
               </div>
             </div>
             <div className="lg:w-3/5 text-center lg:text-left">
               <h2 className="font-bebas text-5xl md:text-6xl mb-6">
-                <span className="text-slate-300">WHO IS</span><br />
-                <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">RITHIK RAWAT?</span>
+                <span className="text-slate-300">THE MIND</span><br />
+                <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">BEHIND THE LENS</span>
               </h2>
               <p className="font-poppins text-lg leading-relaxed text-slate-500 mb-8 text-center lg:text-left">
-                I'm Rithik Rawat — a content creator, videographer, and video editor based in Mumbai, currently pursuing EXTC Engineering at TCET. I combine my passion for cinematic storytelling with a deep understanding of social media to help brands stand out, grow their audience, and turn attention into real business results. From high-energy reels and brand collaborations to premium real estate videos, I craft content that doesn't just look good — it performs.
+                I'm Rithik Rawat — a Mumbai-based content strategist, videographer, and editor who sits at the intersection of cinematic storytelling and performance marketing. Currently pursuing EXTC Engineering at TCET, I've spent the last two years helping brands, creators, and real estate developers turn their Instagram presence into a lead-generation engine. Every frame I shoot and every reel I edit is engineered with one goal: measurable business growth for my clients.
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-3">
                 <a href="https://www.instagram.com/sunita_creative_world?igsh=MXR0bDl4aG54d3U5Nw==" target="_blank" rel="noopener noreferrer">

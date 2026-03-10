@@ -35,10 +35,10 @@ const PortfolioSection = () => {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
-            <span className="text-slate-300">MY PERSONAL</span>{" "}
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">INSTAGRAM VIDEOS</span>
+            <span className="text-slate-300">SELECTED</span>{" "}
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">WORK</span>
           </h2>
-          <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Each video is crafted to help brands attract attention, boost engagement, and present their products or properties in a premium, scroll-stopping way.</p>
+          <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Every reel is crafted to do more than look good — it's built to attract attention, spark engagement, and position your brand as the one worth following.</p>
         </AnimatedSection>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

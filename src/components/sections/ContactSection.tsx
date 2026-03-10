@@ -51,20 +51,20 @@ const ContactSection = () => {
       <div className="max-w-5xl mx-auto">
         <AnimatedSection>
           <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
-            <span className="text-slate-300">READY TO</span>{" "}
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">START?</span>
+            <span className="text-slate-300">LET'S BUILD</span>{" "}
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">SOMETHING GREAT</span>
           </h2>
-          <p className="font-poppins text-center text-slate-400 mb-4 max-w-lg mx-auto">Have a project in mind? Tell me about your idea using the form below and I'll get back to you. You can also reach me via email, WhatsApp, or Instagram — whatever works best for you.</p>
+          <p className="font-poppins text-center text-slate-400 mb-4 max-w-lg mx-auto">Have a project in mind? Share your vision below and I'll respond within 24 hours with a tailored plan. You can also reach me directly via WhatsApp, email, or Instagram.</p>
           <div className="flex items-center justify-center gap-2 mb-16">
             <Clock className="h-4 w-4 text-cyan-500" />
-            <p className="font-poppins text-sm text-cyan-600 font-medium">Limited slots available each month — reach out early to secure your spot.</p>
+            <p className="font-poppins text-sm text-cyan-600 font-medium">I take on a limited number of clients each month to ensure exceptional quality.</p>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
           <div className="grid md:grid-cols-5 gap-8">
             <div className="md:col-span-2 space-y-6">
-              <h3 className="font-bebas text-2xl text-slate-700">LET'S BRING YOUR VISION TO LIFE</h3>
+              <h3 className="font-bebas text-2xl text-slate-700">YOUR NEXT MOVE STARTS HERE</h3>
               <div className="space-y-4">
                 {[
                   { icon: <Phone className="h-5 w-5" />, label: "+91 8591872306", href: "tel:+918591872306" },
@@ -110,7 +110,7 @@ const ContactSection = () => {
                 <Textarea
                   value={contactMessage}
                   onChange={(e) => setContactMessage(e.target.value)}
-                  placeholder="Tell me about your project — what do you need, and when do you need it?"
+                  placeholder="Tell me about your project — what are your goals, and what timeline are you working with?"
                   rows={5}
                   className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl resize-none"
                   required
@@ -121,7 +121,7 @@ const ContactSection = () => {
                     className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-poppins font-semibold py-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-[1.02]"
                   >
                     <MessageCircle className="mr-2 h-5 w-5" />
-                    Send via WhatsApp
+                    Message on WhatsApp
                   </Button>
                   <Button
                     type="button"
@@ -134,7 +134,7 @@ const ContactSection = () => {
                   </Button>
                 </div>
                 <p className="font-poppins text-xs text-slate-400 text-center">
-                  Clicking "Send via WhatsApp" will open WhatsApp with your message pre-filled. "Send via Email" will open your email client.
+                  WhatsApp opens with your message pre-filled. Email opens your default mail client.
                 </p>
               </form>
             </div>

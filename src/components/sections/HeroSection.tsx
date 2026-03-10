@@ -21,19 +21,19 @@ const HeroSection = () => {
         >
           <div className="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-200/50 rounded-full px-4 py-1.5 mb-6">
             <Sparkles className="h-4 w-4 text-cyan-500" />
-            <span className="font-poppins text-sm text-cyan-600">Currently accepting new projects</span>
+            <span className="font-poppins text-sm text-cyan-600">Now booking for Q2 2026 — Limited spots</span>
           </div>
           <h1 className="font-bebas text-6xl md:text-7xl lg:text-8xl font-bold mb-4 leading-[0.9]">
-            <span className="text-slate-800">HELPING</span><br />
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">BRANDS GROW</span><br />
-            <span className="text-slate-800">WITH</span>{" "}
-            <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">POWERFUL CONTENT</span>
+            <span className="text-slate-800">YOUR BRAND</span><br />
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">DESERVES CONTENT</span><br />
+            <span className="text-slate-800">THAT</span>{" "}
+            <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">ACTUALLY CONVERTS</span>
           </h1>
           <p className="font-poppins text-lg text-slate-500 mb-4 max-w-md mx-auto lg:mx-0">
-            I create scroll-stopping reels, cinematic real estate videos, and data-driven content strategies that help brands, creators, and real estate professionals grow on Instagram and convert followers into clients.
+            I produce cinematic reels, property showcases, and strategic content systems that turn passive scrollers into paying clients — for brands, creators, and real estate professionals across Mumbai.
           </p>
           <p className="font-poppins text-sm text-slate-400 mb-8 max-w-md mx-auto lg:mx-0 italic">
-            Trusted by brands, creators, and real estate professionals across Mumbai.
+            The go-to content partner for brands and developers who refuse to blend in.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button
@@ -41,14 +41,14 @@ const HeroSection = () => {
               onClick={() => document.getElementById("portfolio")?.scrollIntoView({ behavior: "smooth" })}
             >
               <Play className="mr-2 h-5 w-5" />
-              View My Portfolio
+              See My Work
             </Button>
             <Button
               variant="outline"
               className="border-slate-300 text-slate-600 px-8 py-6 rounded-full text-lg font-poppins hover:border-cyan-400 hover:text-cyan-600 transition-all duration-300"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Start Your Project
+              Let's Talk Strategy
               <ChevronRight className="ml-1 h-5 w-5" />
             </Button>
           </div>

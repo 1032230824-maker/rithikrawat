@@ -8,7 +8,7 @@ const StickyMobileCTA = () => {
         className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-poppins font-semibold py-5 rounded-full hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
         onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
       >
-        Start a Project
+        Let's Work Together
         <ChevronRight className="ml-1 h-5 w-5" />
       </Button>
     </div>
