@@ -15,14 +15,14 @@ const RealEstateSection = () => {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <div className="text-center mb-6">
-            <span className="inline-block font-poppins text-xs font-bold tracking-[0.3em] uppercase text-cyan-500 bg-cyan-50 px-4 py-2 rounded-full mb-4">Premium Content</span>
+            <span className="inline-block font-poppins text-xs font-bold tracking-[0.3em] uppercase text-cyan-500 bg-cyan-50 px-4 py-2 rounded-full mb-4">Property Marketing Specialist</span>
           </div>
           <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
-            <span className="text-slate-300">MY</span>{" "}
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">REAL ESTATE WORK</span>
+            <span className="text-slate-300">REAL ESTATE</span>{" "}
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">THAT SELLS ITSELF</span>
           </h2>
           <p className="font-poppins text-center text-slate-400 mb-16 max-w-2xl mx-auto">
-            Properties sell faster with the right visuals. These cinematic reels are designed to attract serious buyers, generate more inquiries, and increase your listing's visibility on Instagram — giving your properties the premium presentation they deserve.
+            Today's buyers decide within seconds of seeing a listing. My cinematic property reels are engineered to capture attention, evoke emotion, and drive serious inquiries — giving your developments the digital-first presentation that modern buyers expect.
           </p>
         </AnimatedSection>
 
@@ -36,7 +36,7 @@ const RealEstateSection = () => {
                 <div className="p-5 flex items-center justify-between">
                   <div>
                     <h3 className="font-poppins font-semibold text-slate-700">{reel.title}</h3>
-                    <p className="font-poppins text-sm text-slate-400 mt-1">Shot & Edited by Rithik Rawat</p>
+                    <p className="font-poppins text-sm text-slate-400 mt-1">Produced by Rithik Rawat</p>
                   </div>
                   <a href={reel.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1.5 text-cyan-600 hover:text-cyan-700 transition-colors font-poppins text-sm">
                     View
@@ -51,17 +51,17 @@ const RealEstateSection = () => {
         {/* Real Estate Pricing Packages */}
         <AnimatedSection>
           <h3 className="font-bebas text-3xl md:text-4xl text-center mt-20 mb-10">
-            <span className="text-slate-300">REAL ESTATE</span>{" "}
+            <span className="text-slate-300">PROPERTY CONTENT</span>{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">PACKAGES</span>
           </h3>
           <div className="grid md:grid-cols-3 gap-5">
             <div className="bg-gradient-to-br from-slate-50 to-cyan-50/50 border border-slate-200 rounded-2xl p-8">
               <div className="text-3xl mb-3">🎬</div>
-              <h3 className="font-bebas text-2xl mb-1 text-slate-700">STARTER PACKAGE</h3>
+              <h3 className="font-bebas text-2xl mb-1 text-slate-700">STARTER</h3>
               <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹10,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
-              <p className="font-poppins text-sm text-slate-500 mb-4">Ideal for real estate agents who want consistent, high-quality property content to stay visible on social media.</p>
+              <p className="font-poppins text-sm text-slate-500 mb-4">Perfect for agents building a consistent social presence who want professional property reels without the agency price tag.</p>
               <ul className="space-y-2.5">
-                {["4 Cinematic property reels per month", "iPhone professional property shoot", "High-quality reel editing", "Cinematic color grading", "1 property showcase reel delivered every week"].map((item, i) => (
+                {["4 cinematic property reels delivered monthly", "Professional on-location property shoot", "Polished editing with smooth transitions", "Cinematic color grading for premium feel", "Weekly delivery — one reel every 7 days"].map((item, i) => (
                   <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
                     {item}
@@ -75,11 +75,11 @@ const RealEstateSection = () => {
               <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2"></div>
               <div className="relative z-10">
                 <span className="inline-block font-poppins text-xs font-bold tracking-wider uppercase bg-white/20 px-3 py-1 rounded-full mb-3">Most Popular</span>
-                <h3 className="font-bebas text-2xl mb-1">GROWTH PACKAGE</h3>
+                <h3 className="font-bebas text-2xl mb-1">GROWTH</h3>
                 <p className="font-poppins text-lg font-bold mb-3">₹18,000 <span className="text-sm font-normal opacity-80">/ month</span></p>
-                <p className="font-poppins text-sm opacity-90 mb-4">Built for agents and developers who want premium-quality presentation that sets them apart from the competition.</p>
+                <p className="font-poppins text-sm opacity-90 mb-4">For developers and top-producing agents who want production value that positions their listings above the competition.</p>
                 <ul className="space-y-2.5 mb-6">
-                  {["4 Professional property reels", "Dedicated camera property shoot", "Advanced cinematic editing", "Professional cinematic color grading", "Property highlight reels optimized for Instagram"].map((item, i) => (
+                  {["4 premium property reels with dedicated shoots", "Professional camera equipment — no phone footage", "Advanced cinematic editing and motion graphics", "Studio-grade color grading for luxury appeal", "Instagram-optimized property highlights and stories"].map((item, i) => (
                     <li key={i} className="font-poppins text-sm flex items-center gap-2.5">
                       <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs">✓</span>
                       {item}
@@ -90,18 +90,18 @@ const RealEstateSection = () => {
                   className="bg-white text-blue-600 hover:bg-white/90 font-poppins font-semibold rounded-full px-8 py-5 hover:shadow-lg transition-all duration-300 hover:scale-105"
                   onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
                 >
-                  Request Project Quote →
+                  Get Started Today →
                 </Button>
               </div>
             </div>
 
             <div className="bg-gradient-to-br from-slate-50 to-cyan-50/50 border border-slate-200 rounded-2xl p-8">
               <div className="text-3xl mb-3">👑</div>
-              <h3 className="font-bebas text-2xl mb-1 text-slate-700">PREMIUM PACKAGE</h3>
+              <h3 className="font-bebas text-2xl mb-1 text-slate-700">PREMIUM</h3>
               <p className="font-poppins text-lg font-bold text-cyan-600 mb-3">₹30,000 <span className="text-sm font-normal text-slate-400">/ month</span></p>
-              <p className="font-poppins text-sm text-slate-500 mb-4">For luxury developments and high-end property marketing that demands the highest level of cinematic production.</p>
+              <p className="font-poppins text-sm text-slate-500 mb-4">The full white-glove experience for luxury developments and high-end properties that demand cinematic excellence at every touchpoint.</p>
               <ul className="space-y-2.5">
-                {["8 Cinematic property reels per month", "Professional camera shoot", "High-end cinematic editing and transitions", "Premium cinematic color grading", "Luxury property showcase storytelling style"].map((item, i) => (
+                {["8 cinematic property reels — twice the output", "Professional multi-camera shoot production", "High-end editing with premium transitions and effects", "Bespoke color grading matched to your brand palette", "Luxury storytelling format — walkthrough narratives that sell"].map((item, i) => (
                   <li key={i} className="font-poppins text-sm text-slate-500 flex items-center gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
                     {item}

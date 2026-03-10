@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
         <span className="font-bebas text-2xl bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">RITHIK RAWAT</span>
         <p className="font-poppins text-sm text-slate-400">
-          © {new Date().getFullYear()} Rithik Rawat. All rights reserved.
+          © {new Date().getFullYear()} Rithik Rawat. Crafted with intent.
         </p>
         <div className="flex gap-3">
           {[

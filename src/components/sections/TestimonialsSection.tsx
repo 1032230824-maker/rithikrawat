@@ -3,22 +3,22 @@ import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "Rithik's cinematic property reels helped us generate 3x more inquiries on Instagram. His understanding of real estate marketing is exceptional.",
+    quote: "Rithik's property reels generated 3x more inquiries in the first month alone. He understands buyer psychology and knows exactly how to present a listing so it stops the scroll and starts conversations.",
     name: "Real Estate Client",
     role: "Property Developer, Mumbai",
   },
   {
-    quote: "Working with Rithik transformed our brand's social media presence. His reels consistently outperform our previous content in reach and engagement.",
+    quote: "Before Rithik, our Instagram was an afterthought. Now it's our strongest lead channel. His reels consistently outperform everything we've tried before — in reach, saves, and actual conversions.",
     name: "Brand Collaboration",
     role: "D2C Fashion Brand",
   },
   {
-    quote: "From concept to final edit, Rithik delivers content that actually converts. Our follower growth doubled within the first two months.",
+    quote: "From the initial concept to the final cut, every piece of content Rithik delivers is strategic. Our follower growth doubled in two months, and more importantly, those followers actually engage and buy.",
     name: "Creator Collaboration",
     role: "Content Creator & Influencer",
   },
   {
-    quote: "The quality of work Rithik delivers is on par with professional agencies, but with a much more personal and responsive approach. Highly recommended.",
+    quote: "We compared Rithik's output to agencies charging 5x more — and his work matched or exceeded theirs. The personal attention, quick turnarounds, and creative instinct make him an invaluable partner.",
     name: "Startup Founder",
     role: "Tech Startup, Mumbai",
   },
@@ -30,11 +30,11 @@ const TestimonialsSection = () => {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
-            <span className="text-slate-300">WHAT CLIENTS</span>{" "}
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">SAY</span>
+            <span className="text-slate-300">CLIENT</span>{" "}
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">RESULTS</span>
           </h2>
           <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">
-            Don't just take my word for it — here's what my clients have to say about working together.
+            The work speaks for itself — but here's what my clients have to say about the impact on their business.
           </p>
         </AnimatedSection>
 

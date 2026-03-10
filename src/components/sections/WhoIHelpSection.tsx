@@ -2,17 +2,17 @@ import { Building2, User, Store, Megaphone } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const clients = [
-  { icon: <Building2 className="h-6 w-6" />, title: "Real Estate Agents & Developers", desc: "Cinematic property reels that attract serious buyers" },
-  { icon: <User className="h-6 w-6" />, title: "Personal Brands & Creators", desc: "Authority-building content that grows your audience" },
-  { icon: <Store className="h-6 w-6" />, title: "Local Businesses & Startups", desc: "Social media content that puts you on the map" },
-  { icon: <Megaphone className="h-6 w-6" />, title: "Brands & Agencies", desc: "High-quality reels and strategies that convert" },
+  { icon: <Building2 className="h-6 w-6" />, title: "Real Estate Agents & Developers", desc: "Cinematic walkthroughs that generate qualified buyer inquiries and close deals faster" },
+  { icon: <User className="h-6 w-6" />, title: "Personal Brands & Creators", desc: "Authority-driven content that positions you as the go-to expert in your niche" },
+  { icon: <Store className="h-6 w-6" />, title: "Local Businesses & Startups", desc: "Scroll-stopping social content that builds local visibility and drives footfall" },
+  { icon: <Megaphone className="h-6 w-6" />, title: "Brands & Agencies", desc: "Performance-focused reels and campaigns that move the needle on engagement and sales" },
 ];
 
 const stats = [
-  { value: "50+", label: "Projects Completed" },
-  { value: "2+", label: "Years Experience" },
-  { value: "1000s", label: "Content Views on Instagram" },
-  { value: "10+", label: "Brands & Creators Served" },
+  { value: "50+", label: "Projects Delivered" },
+  { value: "2+", label: "Years of Execution" },
+  { value: "1000s", label: "Organic Views Generated" },
+  { value: "10+", label: "Clients & Brands Partnered" },
 ];
 
 const WhoIHelpSection = () => {
@@ -21,10 +21,10 @@ const WhoIHelpSection = () => {
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
           <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
-            <span className="text-slate-300">WHO I</span>{" "}
-            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">HELP</span>
+            <span className="text-slate-300">BUILT FOR</span>{" "}
+            <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">AMBITIOUS BRANDS</span>
           </h2>
-          <p className="font-poppins text-center text-slate-400 mb-12 max-w-lg mx-auto">I work with ambitious brands and professionals who want content that actually drives results.</p>
+          <p className="font-poppins text-center text-slate-400 mb-12 max-w-lg mx-auto">I partner with professionals and businesses who are serious about turning their social media into a revenue channel — not just a content feed.</p>
         </AnimatedSection>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
           {clients.map((item, index) => (
