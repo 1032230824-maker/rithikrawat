@@ -16,27 +16,27 @@ const SkillsSection = () => {
   const [activeSkill, setActiveSkill] = useState<number | null>(null);
 
   return (
-    <section id="skills" className="py-28 px-4 bg-gradient-to-b from-slate-50/80 to-white">
+    <section id="skills" className="py-32 px-4 bg-gradient-to-b from-slate-50/80 to-white">
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
-          <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
+          <h2 className="font-satoshi text-5xl md:text-6xl font-black text-center mb-4 tracking-tight">
             <span className="text-slate-300">WHAT I</span>{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">BRING TO THE TABLE</span>
           </h2>
-          <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Every capability is sharpened to deliver one thing: measurable growth for your brand. Tap any skill to explore the tools behind it.</p>
+          <p className="font-inter text-center text-slate-400 mb-16 max-w-lg mx-auto">Every capability is sharpened to deliver one thing: measurable growth for your brand. Tap any skill to explore the tools behind it.</p>
         </AnimatedSection>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skills.map((skill, index) => (
             <AnimatedSection key={index} delay={index * 0.1}>
               <motion.div
-                className={`relative cursor-pointer rounded-2xl p-6 border transition-all duration-500 overflow-hidden ${
+                className={`relative cursor-pointer rounded-2xl p-7 border transition-all duration-500 overflow-hidden ${
                   activeSkill === index
                     ? "bg-gradient-to-br border-transparent shadow-2xl"
-                    : "bg-white/80 border-slate-200 hover:border-slate-300 hover:shadow-lg"
+                    : "bg-white/80 border-slate-200 hover:border-slate-300 hover:shadow-xl"
                 }`}
                 onClick={() => setActiveSkill(activeSkill === index ? null : index)}
-                whileHover={{ scale: 1.02 }}
+                whileHover={{ y: -4, scale: 1.02, transition: { duration: 0.3 } }}
                 whileTap={{ scale: 0.98 }}
                 style={activeSkill === index ? { background: "linear-gradient(135deg, rgba(255,255,255,0.95), rgba(255,255,255,0.85))" } : {}}
               >
@@ -47,22 +47,22 @@ const SkillsSection = () => {
                   <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl mb-4 bg-gradient-to-br ${skill.color} text-white shadow-lg`}>
                     {skill.icon}
                   </div>
-                  <h3 className="font-bebas text-xl mb-2 text-slate-700">{skill.name}</h3>
+                  <h3 className="font-satoshi text-xl font-bold mb-2 text-slate-700">{skill.name}</h3>
                   <motion.div
                     initial={false}
                     animate={{ height: activeSkill === index ? "auto" : 0, opacity: activeSkill === index ? 1 : 0 }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden"
                   >
-                    <p className="font-poppins text-sm text-slate-500 mb-4">{skill.description}</p>
+                    <p className="font-inter text-sm text-slate-500 mb-4">{skill.description}</p>
                     <div className="flex flex-wrap gap-2">
                       {skill.tools.map((tool, i) => (
-                        <span key={i} className="font-poppins text-xs bg-slate-100 text-slate-500 px-3 py-1 rounded-full">{tool}</span>
+                        <span key={i} className="font-inter text-xs bg-slate-100 text-slate-500 px-3 py-1 rounded-full">{tool}</span>
                       ))}
                     </div>
                   </motion.div>
                   {activeSkill !== index && (
-                    <p className="font-poppins text-sm text-slate-400 mt-1">Tap to explore →</p>
+                    <p className="font-inter text-sm text-slate-400 mt-1">Tap to explore →</p>
                   )}
                 </div>
               </motion.div>
