@@ -80,6 +80,7 @@ const Index = () => {
       <ContactSection />
       <Footer />
       <StickyMobileCTA />
+      <WelcomeInteraction />
     </div>
   );
 };
