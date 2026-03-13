@@ -53,7 +53,7 @@ const MobileNav = () => {
                 </button>
               ))}
               <Button
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-poppins text-sm mt-2 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-inter text-sm mt-2 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
                 onClick={() => scrollTo("contact")}
               >
                 Hire Me
