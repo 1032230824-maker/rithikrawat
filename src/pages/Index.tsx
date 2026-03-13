@@ -12,6 +12,7 @@ import RealEstateSection from "@/components/sections/RealEstateSection";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/sections/Footer";
+import WelcomeInteraction from "@/components/WelcomeInteraction";
 
 const navItems = [
   { label: "About", id: "about" },
