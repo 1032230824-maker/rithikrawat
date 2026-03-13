@@ -47,7 +47,7 @@ const MobileNav = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollTo(item.id)}
-                  className="font-poppins text-sm text-slate-600 hover:text-cyan-600 hover:bg-cyan-50 py-3 px-4 rounded-xl text-left transition-all duration-200"
+                  className="font-inter text-sm text-slate-600 hover:text-cyan-600 hover:bg-cyan-50 py-3 px-4 rounded-xl text-left transition-all duration-200"
                 >
                   {item.label}
                 </button>
