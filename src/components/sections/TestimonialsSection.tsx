@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 import { Quote } from "lucide-react";
 
@@ -27,14 +26,14 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-32 px-4 bg-gradient-to-b from-slate-50/80 to-white">
+    <section className="py-28 px-4 bg-gradient-to-b from-slate-50/80 to-white">
       <div className="max-w-6xl mx-auto">
         <AnimatedSection>
-          <h2 className="font-satoshi text-5xl md:text-6xl font-black text-center mb-4 tracking-tight">
+          <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
             <span className="text-slate-300">CLIENT</span>{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">RESULTS</span>
           </h2>
-          <p className="font-inter text-center text-slate-400 mb-16 max-w-lg mx-auto">
+          <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">
             The work speaks for itself — but here's what my clients have to say about the impact on their business.
           </p>
         </AnimatedSection>
@@ -42,17 +41,14 @@ const TestimonialsSection = () => {
         <div className="grid md:grid-cols-2 gap-6">
           {testimonials.map((t, index) => (
             <AnimatedSection key={index} delay={index * 0.1}>
-              <motion.div
-                className="bg-white/80 backdrop-blur-sm rounded-2xl p-9 border border-slate-200 hover:shadow-xl transition-all duration-500 h-full flex flex-col"
-                whileHover={{ y: -4, transition: { duration: 0.3 } }}
-              >
+              <div className="bg-white/80 backdrop-blur-sm rounded-2xl p-8 border border-slate-200 hover:shadow-lg transition-all duration-500 h-full flex flex-col">
                 <Quote className="h-8 w-8 text-cyan-500/30 mb-4 flex-shrink-0" />
-                <p className="font-inter text-slate-500 text-sm leading-relaxed mb-6 flex-grow">"{t.quote}"</p>
+                <p className="font-poppins text-slate-500 text-sm leading-relaxed mb-6 flex-grow">"{t.quote}"</p>
                 <div>
-                  <p className="font-satoshi text-lg font-bold text-slate-700">{t.name}</p>
-                  <p className="font-inter text-xs text-slate-400">{t.role}</p>
+                  <p className="font-bebas text-lg text-slate-700">{t.name}</p>
+                  <p className="font-poppins text-xs text-slate-400">{t.role}</p>
                 </div>
-              </motion.div>
+              </div>
             </AnimatedSection>
           ))}
         </div>

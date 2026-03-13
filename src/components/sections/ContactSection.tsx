@@ -47,24 +47,24 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-32 px-4">
+    <section id="contact" className="py-28 px-4">
       <div className="max-w-5xl mx-auto">
         <AnimatedSection>
-          <h2 className="font-satoshi text-5xl md:text-6xl font-black text-center mb-4 tracking-tight">
+          <h2 className="font-bebas text-5xl md:text-6xl text-center mb-4">
             <span className="text-slate-300">LET'S BUILD</span>{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">SOMETHING GREAT</span>
           </h2>
-          <p className="font-inter text-center text-slate-400 mb-4 max-w-lg mx-auto">Have a project in mind? Share your vision below and I'll respond within 24 hours with a tailored plan.</p>
+          <p className="font-poppins text-center text-slate-400 mb-4 max-w-lg mx-auto">Have a project in mind? Share your vision below and I'll respond within 24 hours with a tailored plan. You can also reach me directly via WhatsApp, email, or Instagram.</p>
           <div className="flex items-center justify-center gap-2 mb-16">
             <Clock className="h-4 w-4 text-cyan-500" />
-            <p className="font-inter text-sm text-cyan-600 font-medium">I take on a limited number of clients each month to ensure exceptional quality.</p>
+            <p className="font-poppins text-sm text-cyan-600 font-medium">I take on a limited number of clients each month to ensure exceptional quality.</p>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
-          <div className="grid md:grid-cols-5 gap-10">
+          <div className="grid md:grid-cols-5 gap-8">
             <div className="md:col-span-2 space-y-6">
-              <h3 className="font-satoshi text-2xl font-bold text-slate-700">YOUR NEXT MOVE STARTS HERE</h3>
+              <h3 className="font-bebas text-2xl text-slate-700">YOUR NEXT MOVE STARTS HERE</h3>
               <div className="space-y-4">
                 {[
                   { icon: <Phone className="h-5 w-5" />, label: "+91 8591872306", href: "tel:+918591872306" },
@@ -82,20 +82,20 @@ const ContactSection = () => {
                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500 to-blue-500 flex items-center justify-center text-white group-hover:shadow-lg group-hover:shadow-cyan-500/25 transition-all duration-300">
                       {item.icon}
                     </div>
-                    <span className="font-inter text-sm text-slate-600 group-hover:text-slate-800 transition-colors">{item.label}</span>
+                    <span className="font-poppins text-sm text-slate-600 group-hover:text-slate-800 transition-colors">{item.label}</span>
                   </a>
                 ))}
               </div>
             </div>
 
             <div className="md:col-span-3">
-              <form onSubmit={handleWhatsAppSubmit} className="space-y-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-200 p-8">
+              <form onSubmit={handleWhatsAppSubmit} className="space-y-4 bg-white/80 backdrop-blur-sm rounded-2xl border border-slate-200 p-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <Input
                     value={contactName}
                     onChange={(e) => setContactName(e.target.value)}
                     placeholder="Your Name"
-                    className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-inter rounded-xl h-12"
+                    className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl h-12"
                     required
                   />
                   <Input
@@ -103,7 +103,7 @@ const ContactSection = () => {
                     onChange={(e) => setContactEmail(e.target.value)}
                     type="email"
                     placeholder="Your Email"
-                    className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-inter rounded-xl h-12"
+                    className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl h-12"
                     required
                   />
                 </div>
@@ -112,13 +112,13 @@ const ContactSection = () => {
                   onChange={(e) => setContactMessage(e.target.value)}
                   placeholder="Tell me about your project — what are your goals, and what timeline are you working with?"
                   rows={5}
-                  className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-inter rounded-xl resize-none"
+                  className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl resize-none"
                   required
                 />
                 <div className="flex flex-col sm:flex-row gap-3">
                   <Button
                     type="submit"
-                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-inter font-semibold py-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-[1.02]"
+                    className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-poppins font-semibold py-6 rounded-xl transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-[1.02]"
                   >
                     <MessageCircle className="mr-2 h-5 w-5" />
                     Message on WhatsApp
@@ -127,13 +127,13 @@ const ContactSection = () => {
                     type="button"
                     variant="outline"
                     onClick={handleEmailSubmit}
-                    className="flex-1 border-slate-300 text-slate-600 font-inter font-semibold py-6 rounded-xl hover:border-cyan-400 hover:text-cyan-600 transition-all duration-300"
+                    className="flex-1 border-slate-300 text-slate-600 font-poppins font-semibold py-6 rounded-xl hover:border-cyan-400 hover:text-cyan-600 transition-all duration-300"
                   >
                     <Mail className="mr-2 h-5 w-5" />
                     Send via Email
                   </Button>
                 </div>
-                <p className="font-inter text-xs text-slate-400 text-center">
+                <p className="font-poppins text-xs text-slate-400 text-center">
                   WhatsApp opens with your message pre-filled. Email opens your default mail client.
                 </p>
               </form>

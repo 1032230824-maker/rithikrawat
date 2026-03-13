@@ -43,8 +43,8 @@ const Index = () => {
         className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl bg-white/70 border-b border-slate-200/50"
       >
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
-          <span className="font-satoshi text-2xl font-black bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">RR</span>
-          <div className="hidden md:flex gap-8 font-inter text-sm text-slate-500">
+          <span className="font-bebas text-2xl bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent">RR</span>
+          <div className="hidden md:flex gap-8 font-poppins text-sm text-slate-500">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -59,7 +59,7 @@ const Index = () => {
           <div className="flex items-center gap-2">
             <Button
               size="sm"
-              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-inter text-sm px-5 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
+              className="bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-full font-poppins text-sm px-5 hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
               Hire Me
