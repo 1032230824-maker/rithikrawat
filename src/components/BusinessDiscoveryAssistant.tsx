@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, ChevronRight, Sparkles } from "lucide-react";
+import { saveDiscoveryProfile } from "@/hooks/useDiscoveryProfile";
 
 const STORAGE_KEY = "rr-discovery-completed";
 
