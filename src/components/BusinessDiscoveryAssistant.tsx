@@ -188,7 +188,7 @@ const BusinessDiscoveryAssistant = () => {
                   {current.options!.map((option) => (
                     <button
                       key={option}
-                      onClick={next}
+                      onClick={() => selectOption(option)}
                       className="w-full flex items-center justify-between px-4 py-3.5 rounded-xl border border-slate-200 text-left text-sm font-poppins text-slate-700 hover:border-cyan-400 hover:bg-cyan-50/50 hover:text-cyan-700 transition-all duration-200 group"
                     >
                       {option}
