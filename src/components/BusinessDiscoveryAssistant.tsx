@@ -69,6 +69,26 @@ const BusinessDiscoveryAssistant = () => {
     localStorage.setItem(STORAGE_KEY, "true");
   }, []);
 
+  const selectOption = useCallback((option: string) => {
+    const newAnswers = { ...answers, [step]: option };
+    setAnswers(newAnswers);
+
+    // Map step answers to profile fields
+    const profileUpdate: Record<string, string> = {};
+    if (newAnswers[1]) profileUpdate.visitorType = newAnswers[1];
+    if (newAnswers[2]) profileUpdate.growthFocus = newAnswers[2];
+    if (newAnswers[3]) profileUpdate.supportNeeded = newAnswers[3];
+
+    if (step >= steps.length - 2) {
+      // About to show final screen — save profile
+      saveDiscoveryProfile({ ...profileUpdate, completedAt: new Date().toISOString() });
+    } else {
+      saveDiscoveryProfile(profileUpdate);
+    }
+
+    setStep((s) => s + 1);
+  }, [step, answers]);
+
   const next = useCallback(() => {
     if (step >= steps.length - 1) {
       close();
