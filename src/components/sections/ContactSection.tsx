@@ -27,7 +27,7 @@ const ContactSection = () => {
       window.location.href = whatsappUrl;
     }
 
-    toast({ title: "Redirecting to WhatsApp! 📱", description: "Your message is ready to send." });
+    toast({ title: "Redirecting to WhatsApp! 📱", description: "Your message is ready to send. Just hit send on WhatsApp!" });
     setContactName("");
     setContactEmail("");
     setContactMessage("");
@@ -43,7 +43,7 @@ const ContactSection = () => {
     const body = encodeURIComponent(`Hi Rithik,\n\nI'm ${contactName.trim()} (${contactEmail.trim()}).\n\nProject Details:\n${contactMessage.trim()}`);
     window.open(`mailto:rwtrithik19@gmail.com?subject=${subject}&body=${body}`, "_blank");
 
-    toast({ title: "Opening your email client! ✉️", description: "Your message is ready to send." });
+    toast({ title: "Opening your email client! ✉️", description: "Your message is ready to send via email." });
   };
 
   return (
@@ -54,17 +54,17 @@ const ContactSection = () => {
             <span className="text-slate-300">LET'S BUILD</span>{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">SOMETHING GREAT</span>
           </h2>
-          <p className="font-poppins text-center text-slate-400 mb-4 max-w-md mx-auto text-sm">Share your vision below. I'll respond within 24 hours with a tailored plan.</p>
+          <p className="font-poppins text-center text-slate-400 mb-4 max-w-lg mx-auto">Have a project in mind? Share your vision below and I'll respond within 24 hours with a tailored plan. You can also reach me directly via WhatsApp, email, or Instagram.</p>
           <div className="flex items-center justify-center gap-2 mb-16">
             <Clock className="h-4 w-4 text-cyan-500" />
-            <p className="font-poppins text-sm text-cyan-600 font-medium">Limited spots each month for exceptional quality.</p>
+            <p className="font-poppins text-sm text-cyan-600 font-medium">I take on a limited number of clients each month to ensure exceptional quality.</p>
           </div>
         </AnimatedSection>
 
         <AnimatedSection delay={0.2}>
           <div className="grid md:grid-cols-5 gap-8">
             <div className="md:col-span-2 space-y-6">
-              <h3 className="font-bebas text-2xl text-slate-700">YOUR NEXT MOVE</h3>
+              <h3 className="font-bebas text-2xl text-slate-700">YOUR NEXT MOVE STARTS HERE</h3>
               <div className="space-y-4">
                 {[
                   { icon: <Phone className="h-5 w-5" />, label: "+91 8591872306", href: "tel:+918591872306" },
@@ -110,8 +110,8 @@ const ContactSection = () => {
                 <Textarea
                   value={contactMessage}
                   onChange={(e) => setContactMessage(e.target.value)}
-                  placeholder="Tell me about your project — goals and timeline"
-                  rows={4}
+                  placeholder="Tell me about your project — what are your goals, and what timeline are you working with?"
+                  rows={5}
                   className="bg-slate-50 border-slate-200 text-slate-800 placeholder:text-slate-400 font-poppins rounded-xl resize-none"
                   required
                 />
@@ -133,6 +133,9 @@ const ContactSection = () => {
                     Send via Email
                   </Button>
                 </div>
+                <p className="font-poppins text-xs text-slate-400 text-center">
+                  WhatsApp opens with your message pre-filled. Email opens your default mail client.
+                </p>
               </form>
             </div>
           </div>

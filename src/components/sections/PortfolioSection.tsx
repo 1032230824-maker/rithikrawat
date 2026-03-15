@@ -38,7 +38,7 @@ const PortfolioSection = () => {
             <span className="text-slate-300">SELECTED</span>{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">WORK</span>
           </h2>
-          <p className="font-poppins text-center text-slate-400 mb-16 max-w-md mx-auto text-sm">Every reel is built to attract attention, spark engagement, and position your brand as the one worth following.</p>
+          <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Every reel is crafted to do more than look good — it's built to attract attention, spark engagement, and position your brand as the one worth following.</p>
         </AnimatedSection>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
@@ -49,7 +49,7 @@ const PortfolioSection = () => {
                   <LazyInstagramEmbed embedUrl={item.embedUrl} title={item.title} altText={item.alt} />
                 </div>
                 <div className="p-5 flex items-center justify-between">
-                  <h3 className="font-poppins font-semibold text-slate-700 text-sm">{item.title}</h3>
+                  <h3 className="font-poppins font-semibold text-slate-700">{item.title}</h3>
                   <a
                     href={item.link}
                     target="_blank"

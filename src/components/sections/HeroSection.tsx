@@ -1,26 +1,27 @@
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Play, ChevronRight, Sparkles, ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 
-const trustStats = [
-  { value: "50+", label: "Projects Delivered" },
-  { value: "10+", label: "Clients & Brands" },
-  { value: "1M+", label: "Views Generated" },
-];
-
 const HeroSection = () => {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
+
   return (
     <section className="relative min-h-screen flex items-center justify-center px-4 pt-20">
       <div className="max-w-6xl mx-auto w-full flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
         <motion.div
           className="lg:w-1/2 text-center lg:text-left"
           initial={{ opacity: 0, x: -60 }}
-          animate={{ opacity: 1, x: 0 }}
+          animate={isVisible ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="inline-flex items-center gap-2 bg-cyan-50 border border-cyan-200/50 rounded-full px-4 py-1.5 mb-6">
             <Sparkles className="h-4 w-4 text-cyan-500" />
-            <span className="font-poppins text-sm text-cyan-600">Now booking Q2 2026 — Limited spots</span>
+            <span className="font-poppins text-sm text-cyan-600">Now booking for Q2 2026 — Limited spots</span>
           </div>
           <h1 className="font-bebas text-6xl md:text-7xl lg:text-8xl font-bold mb-4 leading-[0.9]">
             <span className="text-slate-800">YOUR BRAND</span><br />
@@ -28,8 +29,11 @@ const HeroSection = () => {
             <span className="text-slate-800">THAT</span>{" "}
             <span className="bg-gradient-to-r from-blue-500 to-violet-500 bg-clip-text text-transparent">ACTUALLY CONVERTS</span>
           </h1>
-          <p className="font-poppins text-lg text-slate-500 mb-8 max-w-md mx-auto lg:mx-0">
-            Cinematic reels and strategic content that turn social media into a lead-generation engine — for brands, creators, and real estate developers.
+          <p className="font-poppins text-lg text-slate-500 mb-4 max-w-md mx-auto lg:mx-0">
+            I produce cinematic reels, property showcases, and strategic content systems that turn passive scrollers into paying clients — for brands, creators, and real estate professionals across Mumbai.
+          </p>
+          <p className="font-poppins text-sm text-slate-400 mb-8 max-w-md mx-auto lg:mx-0 italic">
+            The go-to content partner for brands and developers who refuse to blend in.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Button
@@ -44,26 +48,16 @@ const HeroSection = () => {
               className="border-slate-300 text-slate-600 px-8 py-6 rounded-full text-lg font-poppins hover:border-cyan-400 hover:text-cyan-600 transition-all duration-300"
               onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
             >
-              Start a Project
+              Let's Talk Strategy
               <ChevronRight className="ml-1 h-5 w-5" />
             </Button>
-          </div>
-
-          {/* Trust indicators */}
-          <div className="flex items-center justify-center lg:justify-start gap-8 mt-10 pt-8 border-t border-slate-200/60">
-            {trustStats.map((stat, i) => (
-              <div key={i} className="text-center lg:text-left">
-                <p className="font-bebas text-2xl bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">{stat.value}</p>
-                <p className="font-poppins text-xs text-slate-400">{stat.label}</p>
-              </div>
-            ))}
           </div>
         </motion.div>
 
         <motion.div
           className="lg:w-1/2 flex justify-center"
           initial={{ opacity: 0, x: 60 }}
-          animate={{ opacity: 1, x: 0 }}
+          animate={isVisible ? { opacity: 1, x: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="relative">
@@ -82,6 +76,7 @@ const HeroSection = () => {
                     className="w-full h-full"
                     frameBorder="0"
                     scrolling="no"
+                    allowTransparency={true}
                     allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
                     title="Featured Instagram reel by Rithik Rawat"
                   />

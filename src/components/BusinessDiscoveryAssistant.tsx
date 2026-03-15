@@ -9,7 +9,8 @@ const steps = [
   {
     type: "welcome" as const,
     title: "Welcome. Let's understand your business.",
-    description: "This quick 30-second discovery helps us guide you to the most valuable solutions on this platform.",
+    description:
+      "This quick 30-second discovery helps us guide you to the most valuable solutions on this platform.",
   },
   {
     type: "question" as const,
@@ -18,34 +19,37 @@ const steps = [
       "Real Estate Developer",
       "Business Owner",
       "Startup Founder",
-      "Personal Brand",
       "Marketing Agency",
+      "Entrepreneur / Personal Brand",
     ],
   },
   {
     type: "question" as const,
-    title: "What is your main goal?",
+    title: "What is your main growth focus right now?",
     options: [
-      "Generate leads",
-      "Grow Instagram presence",
-      "Launch a brand",
-      "Sell properties",
+      "Generate more qualified leads",
+      "Build a stronger brand presence",
+      "Grow social media influence",
+      "Launch a new project",
+      "Scale marketing performance",
     ],
   },
   {
     type: "question" as const,
-    title: "What help do you need?",
+    title: "What type of support would create the biggest impact for you?",
     options: [
       "Content creation",
-      "Reel production",
-      "Social media strategy",
-      "Full growth partnership",
+      "Social media growth strategy",
+      "Brand positioning",
+      "Marketing consultation",
+      "Complete business growth solution",
     ],
   },
   {
     type: "final" as const,
-    title: "Perfect. Let's show you the best work for your business.",
-    description: "Based on your goals, we've personalized the experience to highlight the most relevant services and work for you.",
+    title: "You're in the right place.",
+    description:
+      "Based on your goals, this platform provides powerful strategies, content, and digital growth solutions designed to help businesses scale and stand out.",
   },
 ];
 
@@ -56,7 +60,7 @@ const BusinessDiscoveryAssistant = () => {
 
   useEffect(() => {
     if (localStorage.getItem(STORAGE_KEY)) return;
-    const timer = setTimeout(() => setVisible(true), 2500);
+    const timer = setTimeout(() => setVisible(true), 2000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -69,12 +73,14 @@ const BusinessDiscoveryAssistant = () => {
     const newAnswers = { ...answers, [step]: option };
     setAnswers(newAnswers);
 
+    // Map step answers to profile fields
     const profileUpdate: Record<string, string> = {};
     if (newAnswers[1]) profileUpdate.visitorType = newAnswers[1];
     if (newAnswers[2]) profileUpdate.growthFocus = newAnswers[2];
     if (newAnswers[3]) profileUpdate.supportNeeded = newAnswers[3];
 
     if (step >= steps.length - 2) {
+      // About to show final screen — save profile
       saveDiscoveryProfile({ ...profileUpdate, completedAt: new Date().toISOString() });
     } else {
       saveDiscoveryProfile(profileUpdate);
@@ -206,16 +212,16 @@ const BusinessDiscoveryAssistant = () => {
                   </p>
                   <div className="flex gap-3">
                     <button
-                      onClick={() => scrollTo("portfolio")}
+                      onClick={close}
                       className="flex-1 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-poppins text-sm font-medium hover:shadow-lg hover:shadow-cyan-500/25 transition-all duration-300"
                     >
-                      Explore Work
+                      Explore Website
                     </button>
                     <button
                       onClick={() => scrollTo("contact")}
                       className="flex-1 py-3 rounded-xl border border-slate-200 text-slate-700 font-poppins text-sm font-medium hover:bg-slate-50 transition-colors"
                     >
-                      Book Strategy Call
+                      Start a Conversation
                     </button>
                   </div>
                 </div>

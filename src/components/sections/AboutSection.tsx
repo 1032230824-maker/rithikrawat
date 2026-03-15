@@ -25,7 +25,7 @@ const AboutSection = () => {
                   transition={{ duration: 3, repeat: Infinity }}
                 >
                   <p className="font-bebas text-2xl text-cyan-600">50+</p>
-                  <p className="font-poppins text-xs text-slate-500">Projects</p>
+                  <p className="font-poppins text-xs text-slate-500">Projects Delivered</p>
                 </motion.div>
                 <motion.div
                   className="absolute -left-6 bottom-12 bg-white rounded-xl shadow-lg px-4 py-3 border border-slate-100"
@@ -33,7 +33,7 @@ const AboutSection = () => {
                   transition={{ duration: 3.5, repeat: Infinity }}
                 >
                   <p className="font-bebas text-2xl text-blue-600">2+</p>
-                  <p className="font-poppins text-xs text-slate-500">Years</p>
+                  <p className="font-poppins text-xs text-slate-500">Years in the Game</p>
                 </motion.div>
               </div>
             </div>
@@ -42,11 +42,8 @@ const AboutSection = () => {
                 <span className="text-slate-300">THE MIND</span><br />
                 <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">BEHIND THE LENS</span>
               </h2>
-              <p className="font-poppins text-base leading-relaxed text-slate-500 mb-4">
-                I'm Rithik Rawat — a Mumbai-based content strategist and videographer at the intersection of cinematic storytelling and performance marketing.
-              </p>
-              <p className="font-poppins text-sm text-slate-400 mb-8">
-                Two years helping brands and real estate developers turn Instagram into a lead-generation engine. Every frame is engineered for measurable business growth.
+              <p className="font-poppins text-lg leading-relaxed text-slate-500 mb-8 text-center lg:text-left">
+                I'm Rithik Rawat — a Mumbai-based content strategist, videographer, and editor who sits at the intersection of cinematic storytelling and performance marketing. Currently pursuing EXTC Engineering at TCET, I've spent the last two years helping brands, creators, and real estate developers turn their Instagram presence into a lead-generation engine. Every frame I shoot and every reel I edit is engineered with one goal: measurable business growth for my clients.
               </p>
               <div className="flex flex-wrap justify-center lg:justify-start gap-3">
                 <a href="https://www.instagram.com/sunita_creative_world?igsh=MXR0bDl4aG54d3U5Nw==" target="_blank" rel="noopener noreferrer">

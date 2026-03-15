@@ -4,12 +4,12 @@ import { motion } from "framer-motion";
 import AnimatedSection from "@/components/AnimatedSection";
 
 const skills = [
-  { name: "Video Editing", icon: <Video className="h-7 w-7" />, description: "Polished, retention-optimized videos that keep viewers engaged from first frame to final CTA.", tools: ["Premiere Pro", "After Effects", "DaVinci Resolve"], color: "from-violet-500 to-fuchsia-500" },
-  { name: "Reels & Shorts", icon: <Play className="h-7 w-7" />, description: "Vertical-first content engineered to stop the scroll and push your brand into the Explore page.", tools: ["CapCut", "Instagram", "TikTok"], color: "from-blue-500 to-cyan-400" },
-  { name: "Instagram Strategy", icon: <Target className="h-7 w-7" />, description: "Data-backed growth roadmaps that transform followers into paying clients.", tools: ["Meta Business Suite", "Analytics", "Insights"], color: "from-emerald-500 to-teal-400" },
-  { name: "Graphic Design", icon: <Palette className="h-7 w-7" />, description: "On-brand carousels and feed designs that make your profile impossible to scroll past.", tools: ["Canva", "Photoshop", "Illustrator"], color: "from-orange-500 to-amber-400" },
-  { name: "Thumbnail Creation", icon: <Puzzle className="h-7 w-7" />, description: "Click-worthy thumbnails that dramatically increase your content's click-through rate.", tools: ["Photoshop", "Canva", "Figma"], color: "from-rose-500 to-pink-400" },
-  { name: "Performance Analytics", icon: <BarChart3 className="h-7 w-7" />, description: "Every metric tracked, every insight actioned — content strategy driven by real data.", tools: ["Meta Analytics", "Google Analytics", "Sprout Social"], color: "from-sky-500 to-indigo-400" },
+  { name: "Video Editing", icon: <Video className="h-7 w-7" />, description: "Raw footage transformed into polished, retention-optimized videos that keep viewers engaged from first frame to final CTA.", tools: ["Premiere Pro", "After Effects", "DaVinci Resolve"], color: "from-violet-500 to-fuchsia-500" },
+  { name: "Reels & Shorts", icon: <Play className="h-7 w-7" />, description: "Vertical-first content engineered to stop the scroll, spike engagement, and push your brand into the Explore page.", tools: ["CapCut", "Instagram", "TikTok"], color: "from-blue-500 to-cyan-400" },
+  { name: "Instagram Strategy", icon: <Target className="h-7 w-7" />, description: "Data-backed growth roadmaps that transform followers into an engaged community — and that community into paying clients.", tools: ["Meta Business Suite", "Analytics", "Insights"], color: "from-emerald-500 to-teal-400" },
+  { name: "Graphic Design", icon: <Palette className="h-7 w-7" />, description: "On-brand carousels, stories, and feed designs that make your profile feel cohesive, credible, and impossible to scroll past.", tools: ["Canva", "Photoshop", "Illustrator"], color: "from-orange-500 to-amber-400" },
+  { name: "Thumbnail Creation", icon: <Puzzle className="h-7 w-7" />, description: "Click-worthy thumbnails designed to outperform in crowded feeds and dramatically increase your content's click-through rate.", tools: ["Photoshop", "Canva", "Figma"], color: "from-rose-500 to-pink-400" },
+  { name: "Performance Analytics", icon: <BarChart3 className="h-7 w-7" />, description: "Every metric tracked, every insight actioned — so your content strategy evolves with real data, not guesswork.", tools: ["Meta Analytics", "Google Analytics", "Sprout Social"], color: "from-sky-500 to-indigo-400" },
 ];
 
 const SkillsSection = () => {
@@ -23,7 +23,7 @@ const SkillsSection = () => {
             <span className="text-slate-300">WHAT I</span>{" "}
             <span className="bg-gradient-to-r from-cyan-500 to-blue-600 bg-clip-text text-transparent">BRING TO THE TABLE</span>
           </h2>
-          <p className="font-poppins text-center text-slate-400 mb-16 max-w-md mx-auto text-sm">Every capability sharpened for one thing: measurable growth for your brand.</p>
+          <p className="font-poppins text-center text-slate-400 mb-16 max-w-lg mx-auto">Every capability is sharpened to deliver one thing: measurable growth for your brand. Tap any skill to explore the tools behind it.</p>
         </AnimatedSection>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
