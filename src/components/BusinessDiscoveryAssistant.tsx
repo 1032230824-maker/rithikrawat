@@ -56,6 +56,7 @@ const steps = [
 const BusinessDiscoveryAssistant = () => {
   const [visible, setVisible] = useState(false);
   const [step, setStep] = useState(0);
+  const [answers, setAnswers] = useState<Record<number, string>>({});
 
   useEffect(() => {
     if (localStorage.getItem(STORAGE_KEY)) return;
