@@ -13,6 +13,8 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/sections/Footer";
 import BusinessDiscoveryAssistant from "@/components/BusinessDiscoveryAssistant";
+import PersonalizedBadge from "@/components/PersonalizedBadge";
+import { useDiscoveryProfile } from "@/hooks/useDiscoveryProfile";
 
 const navItems = [
   { label: "About", id: "about" },
