@@ -21,7 +21,7 @@ export default {
 		extend: {
 			fontFamily: {
 				'bebas': ['Bebas Neue', 'cursive'],
-				'poppins': ['Poppins', 'sans-serif'],
+				'poppins': ['Inter', 'Poppins', 'sans-serif'],
 			},
 			colors: {
 				border: 'hsl(var(--border))',
