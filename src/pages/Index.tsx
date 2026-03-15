@@ -13,6 +13,8 @@ import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import ContactSection from "@/components/sections/ContactSection";
 import Footer from "@/components/sections/Footer";
 import BusinessDiscoveryAssistant from "@/components/BusinessDiscoveryAssistant";
+import PersonalizedBadge from "@/components/PersonalizedBadge";
+import { useDiscoveryProfile } from "@/hooks/useDiscoveryProfile";
 
 const navItems = [
   { label: "About", id: "about" },
@@ -25,6 +27,28 @@ const navItems = [
 ];
 
 const Index = () => {
+  const { isRelevantSection, hasProfile, profile } = useDiscoveryProfile();
+
+  // Define sections with their IDs for potential reordering
+  const sections = [
+    { id: "about", component: <AboutSection /> },
+    { id: "who-i-help", component: <WhoIHelpSection /> },
+    { id: "portfolio", component: <PortfolioSection /> },
+    { id: "skills", component: <SkillsSection /> },
+    { id: "services", component: <ServicesSection /> },
+    { id: "real-estate", component: <RealEstateSection /> },
+    { id: "testimonials", component: <TestimonialsSection /> },
+    { id: "contact", component: <ContactSection /> },
+  ];
+
+  // Reorder: move relevant sections to the top (after hero)
+  const orderedSections = hasProfile
+    ? [
+        ...sections.filter((s) => isRelevantSection(s.id)),
+        ...sections.filter((s) => !isRelevantSection(s.id)),
+      ]
+    : sections;
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50/50 text-slate-800 overflow-hidden">
       {/* Ambient Background */}
@@ -34,6 +58,22 @@ const Index = () => {
         <div className="absolute -bottom-20 right-1/3 w-[300px] h-[300px] bg-violet-100/20 rounded-full blur-3xl animate-float" style={{ animationDelay: "5s" }}></div>
         <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.02)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
       </div>
+
+      {/* Personalized Welcome Bar */}
+      {hasProfile && profile.visitorType && (
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 0.6 }}
+          className="fixed top-[73px] left-0 right-0 z-40 bg-gradient-to-r from-cyan-500/10 to-blue-500/10 backdrop-blur-sm border-b border-cyan-200/30"
+        >
+          <div className="max-w-6xl mx-auto px-6 py-2 flex items-center justify-center gap-2">
+            <span className="text-xs font-poppins text-cyan-700">
+              ✨ Personalized for <span className="font-semibold">{profile.visitorType}s</span> — sections reordered for you
+            </span>
+          </div>
+        </motion.div>
+      )}
 
       {/* Navigation */}
       <motion.nav
@@ -52,6 +92,9 @@ const Index = () => {
                 className="hover:text-cyan-600 transition-colors duration-300 relative group"
               >
                 {item.label}
+                {hasProfile && isRelevantSection(item.id) && (
+                  <span className="absolute -top-1 -right-1 w-1.5 h-1.5 bg-cyan-500 rounded-full"></span>
+                )}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-blue-500 group-hover:w-full transition-all duration-300"></span>
               </button>
             ))}
@@ -70,14 +113,16 @@ const Index = () => {
       </motion.nav>
 
       <HeroSection />
-      <AboutSection />
-      <WhoIHelpSection />
-      <PortfolioSection />
-      <SkillsSection />
-      <ServicesSection />
-      <RealEstateSection />
-      <TestimonialsSection />
-      <ContactSection />
+      {orderedSections.map((section) => (
+        <div key={section.id} className="relative">
+          {hasProfile && isRelevantSection(section.id) && (
+            <div className="flex justify-center pt-4">
+              <PersonalizedBadge />
+            </div>
+          )}
+          {section.component}
+        </div>
+      ))}
       <Footer />
       <StickyMobileCTA />
       <BusinessDiscoveryAssistant />

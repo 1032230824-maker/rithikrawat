@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { X, ArrowRight, ChevronRight, Sparkles } from "lucide-react";
+import { saveDiscoveryProfile } from "@/hooks/useDiscoveryProfile";
 
 const STORAGE_KEY = "rr-discovery-completed";
 
@@ -55,6 +56,7 @@ const steps = [
 const BusinessDiscoveryAssistant = () => {
   const [visible, setVisible] = useState(false);
   const [step, setStep] = useState(0);
+  const [answers, setAnswers] = useState<Record<number, string>>({});
 
   useEffect(() => {
     if (localStorage.getItem(STORAGE_KEY)) return;
@@ -66,6 +68,26 @@ const BusinessDiscoveryAssistant = () => {
     setVisible(false);
     localStorage.setItem(STORAGE_KEY, "true");
   }, []);
+
+  const selectOption = useCallback((option: string) => {
+    const newAnswers = { ...answers, [step]: option };
+    setAnswers(newAnswers);
+
+    // Map step answers to profile fields
+    const profileUpdate: Record<string, string> = {};
+    if (newAnswers[1]) profileUpdate.visitorType = newAnswers[1];
+    if (newAnswers[2]) profileUpdate.growthFocus = newAnswers[2];
+    if (newAnswers[3]) profileUpdate.supportNeeded = newAnswers[3];
+
+    if (step >= steps.length - 2) {
+      // About to show final screen — save profile
+      saveDiscoveryProfile({ ...profileUpdate, completedAt: new Date().toISOString() });
+    } else {
+      saveDiscoveryProfile(profileUpdate);
+    }
+
+    setStep((s) => s + 1);
+  }, [step, answers]);
 
   const next = useCallback(() => {
     if (step >= steps.length - 1) {
@@ -166,7 +188,7 @@ const BusinessDiscoveryAssistant = () => {
                   {current.options!.map((option) => (
                     <button
                       key={option}
-                      onClick={next}
+                      onClick={() => selectOption(option)}
                       className="w-full flex items-center justify-between px-4 py-3.5 rounded-xl border border-slate-200 text-left text-sm font-poppins text-slate-700 hover:border-cyan-400 hover:bg-cyan-50/50 hover:text-cyan-700 transition-all duration-200 group"
                     >
                       {option}
